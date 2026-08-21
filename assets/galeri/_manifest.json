@@ -1,0 +1,738 @@
+[
+ {
+  "id": 53,
+  "fail": "maeltree-badminton-club.jpg",
+  "kat": "badminton",
+  "kategori": "Badminton",
+  "tajuk": "Maeltree Badminton Club",
+  "alt": "Medal Maeltree Badminton Club. Bentuk custom melengkung seperti kubah, latar biru navy dgn bulu tangkis putih-biru memancar dan hijau. Nama 'Maeltree' dlm tulisan sambung merah. Lanyard merah jambu be"
+ },
+ {
+  "id": 56,
+  "fail": "kejohanan-badminton-kemerdekaan-sbbc-edisi-1-2024.jpg",
+  "kat": "badminton",
+  "kategori": "Badminton",
+  "tajuk": "Kejohanan Badminton Kemerdekaan SBBC Edisi 1 2024",
+  "alt": "Medal Kejohanan Badminton Kemerdekaan SBBC Edisi 1 2024. Bentuk custom, latar biru navy dgn raket besar dan bentuk geometri warna-warni (merah, kuning, hijau, biru). Teks 'KEMERDEKAAN' merah menonjol."
+ },
+ {
+  "id": 59,
+  "fail": "sirkit-akhir-kebangsaan-para-badminton-msn-allianz-b.jpg",
+  "kat": "badminton",
+  "kategori": "Badminton",
+  "tajuk": "Sirkit Akhir Kebangsaan Para Badminton MSN-Allianz-BAM 2024",
+  "alt": "Medal Sirkit Akhir Kebangsaan PARA BADMINTON 2024, anjuran MSN-Allianz-BAM. Bentuk custom, latar putih dgn raket, bulu tangkis dan lengkok oren-merah-hitam. Lanyard oren-hitam bercetak. Contoh medal p"
+ },
+ {
+  "id": 8,
+  "fail": "skypark-merdeka-pushbike-cup-2025.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Skypark Merdeka Pushbike Cup 2025",
+  "alt": "Medal Skypark Merdeka Pushbike Cup 2025 untuk perlumbaan pushbike kanak-kanak. Bentuk bulat dengan potongan berlubang (cut-out) di tengah bentuk basikal dan nombor 68 dengan Jalur Gemilang. Warna grad"
+ },
+ {
+  "id": 13,
+  "fail": "skypark-merdeka-pushbike-cup-2025-kuantiti.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Skypark Merdeka Pushbike Cup 2025 (kuantiti)",
+  "alt": "Medal Skypark Merdeka Pushbike Cup 2025 dalam kuantiti — beberapa keping bersusun menunjukkan potongan cut-out basikal dan lanyard jalur merah-putih. Bagus untuk tunjuk konsistensi kualiti untuk order"
+ },
+ {
+  "id": 44,
+  "fail": "chokoh-funride-3-0.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Chokoh Funride 3.0",
+  "alt": "Medal Chokoh Funride 3.0 'Dari Pedal Ke Hati' — acara berbasikal. Bentuk custom bulat dengan bingkai hitam tebal, warna merah, biru dan krim, serta silhouette pelumba basikal. Digantung dengan tab kul"
+ },
+ {
+  "id": 55,
+  "fail": "fun-ride-d-skis-2024.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Fun Ride D'SKIS 2024",
+  "alt": "Medal Fun Ride D'SKIS 2024. Bentuk custom seperti GEAR BASIKAL bergerigi, warna putih krim dgn pelumba basikal biru dan bulatan kuning. Digantung dengan tab kulit hitam. Contoh potongan bentuk gear ya"
+ },
+ {
+  "id": 58,
+  "fail": "expedisi-kayuhan-basikal-2024-finisher.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Expedisi Kayuhan Basikal 2024 — Finisher",
+  "alt": "Medal Expedisi Kayuhan Basikal 2024 Finisher. Bentuk custom dgn bingkai RANTAI BASIKAL dan gear di bawah, latar krim dgn silhouette pelumba hitam, pita ungu dan biru. Lanyard biru jabatan. Contoh bing"
+ },
+ {
+  "id": 61,
+  "fail": "mhx-pushbike-championship-2024.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "MHX Pushbike Championship 2024",
+  "alt": "Medal MHX Pushbike Championship 2024. Bentuk custom bulat dgn watak KARTUN budak menunggang pushbike. Warna paling terang dlm koleksi — merah jambu, kuning, biru, hijau berjalur. Lanyard pelangi. Sang"
+ },
+ {
+  "id": 68,
+  "fail": "pushbike-karnival-berbasikal-kulai-2025.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Pushbike Karnival Berbasikal Kulai 2025",
+  "alt": "Medal Pushbike Karnival Berbasikal Kulai 2025 (31 Mei 2025). Bentuk custom dgn DUA watak kartun penunggang berbaju merah di kiri dan kanan, teks graffiti biru-merah bertindan. Reben merah. Sesuai karn"
+ },
+ {
+  "id": 69,
+  "fail": "pushbike-karnival-berbasikal-kulai-2025-kuantiti.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Pushbike Karnival Berbasikal Kulai 2025 (kuantiti)",
+  "alt": "Medal Pushbike Karnival Kulai 2025 dlm kuantiti — tunjuk PELBAGAI WARNA LANYARD untuk satu design medal yang sama (kuning, biru, merah, putih). Contoh baik bila customer nak bezakan kategori umur guna"
+ },
+ {
+  "id": 73,
+  "fail": "central-i-city-pushbike-funrace-2025.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Central i-City Pushbike Funrace 2025",
+  "alt": "Medal Central i-City Pushbike Funrace 2025. Bentuk custom BERSAYAP, latar biru navy dgn teks oren-kuning tebal dan GAMBAR FOTO sebenar kanak-kanak berhelmet dimasukkan ke dalam design. Contoh cetakan "
+ },
+ {
+  "id": 77,
+  "fail": "skypark-pushbike-challenge-2024-bentuk-kapal-terbang.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Skypark Pushbike Challenge 2024 — bentuk kapal terbang",
+  "alt": "Medal Skypark Pushbike Challenge 2024 — dipotong mengikut bentuk KAPAL TERBANG (sesuai tema Skypark/lapangan terbang). Warna kelabu, merah dan hitam. Digantung dgn tab kulit. CONTOH TERBAIK untuk tunj"
+ },
+ {
+  "id": 94,
+  "fail": "fun-ride-pusat-pendidikan-as-sa-idiyyah.jpg",
+  "kat": "basikal",
+  "kategori": "Berbasikal",
+  "tajuk": "Fun Ride Pusat Pendidikan As-Sa'idiyyah",
+  "alt": "Medal Fun Ride Pusat Pendidikan As-Sa'idiyyah. Bentuk custom dgn sepanduk KUNING besar bertulis 'FUN RIDE', silhouette pelumba basikal warna-warni dan latar hijau-biru. Tab kulit coklat. Gambar studio"
+ },
+ {
+  "id": 24,
+  "fail": "pacsb-friendly-futsal-tournament-2025.jpg",
+  "kat": "bola",
+  "kategori": "Bola Sepak & Futsal",
+  "tajuk": "PACSB Friendly Futsal Tournament 2025",
+  "alt": "Medal PACSB Friendly Futsal Tournament 2025. Bentuk custom perisai dengan bola sepak berapi dan silhouette serigala/harimau. Warna coklat marun dan emas — nampak premium. Moto 'Kicking Goals, Keeping "
+ },
+ {
+  "id": 27,
+  "fail": "pacsb-friendly-futsal-tournament-2025-dekat.jpg",
+  "kat": "bola",
+  "kategori": "Bola Sepak & Futsal",
+  "tajuk": "PACSB Friendly Futsal Tournament 2025 (dekat)",
+  "alt": "Medal PACSB Friendly Futsal Tournament 2025 diambil dekat — jelas tunjuk kualiti cetakan warna marun dan emas serta bentuk perisai berapi. Ada beberapa keping di bawah."
+ },
+ {
+  "id": 38,
+  "fail": "glics-football-tournament-2025.jpg",
+  "kat": "bola",
+  "kategori": "Bola Sepak & Futsal",
+  "tajuk": "GLICs Football Tournament 2025",
+  "alt": "Medal GLICs Football Tournament 2025. Bentuk custom perisai dengan bola sepak besar di atas, bintang dan silhouette pemain menendang. Warna marun gelap dengan bingkai kuning emas. Reben jalur merah-pu"
+ },
+ {
+  "id": 40,
+  "fail": "edu-league-cup-2025-depan.jpg",
+  "kat": "bola",
+  "kategori": "Bola Sepak & Futsal",
+  "tajuk": "Edu League Cup 2025 (depan)",
+  "alt": "Medal Edu League Cup 2025 — liga bola sepak. Bentuk bulat dengan bola sepak besar di tengah (putih dan biru navy) dan bingkai emas. Teks 'EDU LEAGUE CUP 2025' melengkung. Reben emas. Design ringkas da"
+ },
+ {
+  "id": 41,
+  "fail": "edu-league-cup-2025-belakang-johan-2-sided.jpg",
+  "kat": "bola",
+  "kategori": "Bola Sepak & Futsal",
+  "tajuk": "Edu League Cup 2025 — belakang Johan (2 sided)",
+  "alt": "Bahagian BELAKANG medal Edu League Cup 2025 — permukaan emas penuh dengan logo pasukan, teks besar 'JOHAN' dan 'EDU LEAGUE CUP 2025'. Contoh medal 2 sided untuk kedudukan pemenang."
+ },
+ {
+  "id": 48,
+  "fail": "karnival-bola-sepak-tkfc-cup-u12-2026.jpg",
+  "kat": "bola",
+  "kategori": "Bola Sepak & Futsal",
+  "tajuk": "Karnival Bola Sepak TKFC Cup U12 2026",
+  "alt": "Medal Karnival Bola Sepak TKFC Cup U12 2026. Bentuk bulat biru dengan potongan cut-out segi tiga di tengah, logo TKFC Football Club dan bola sepak. Teks melengkung 'KARNIVAL BOLA SEPAK TKFC CUP U12' d"
+ },
+ {
+  "id": 11,
+  "fail": "pertandingan-bowling-jtmp-perak-2025-kresma.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Pertandingan Bowling JTMP Perak 2025 (Kresma)",
+  "alt": "Medal Pertandingan Bowling JTMP Perak 2025 (Kresma). Bentuk custom dengan pin bowling dan bola timbul di bahagian atas. Warna gelap dengan letupan merah, biru dan ungu. Lanyard bercetak penuh corak wa"
+ },
+ {
+  "id": 23,
+  "fail": "anz-bowling-2025.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "ANZ Bowling 2025",
+  "alt": "Medal ANZ Bowling 2025 — bowling korporat. Bentuk custom perisai dengan pin bowling dan bola timbul di sudut kanan atas. Warna hitam dengan logo ANZ biru. Teks besar 'ANZ BOWLING 2025'. Lanyard bercet"
+ },
+ {
+  "id": 45,
+  "fail": "wasiyyah-bowling-championship-2026.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Wasiyyah Bowling Championship 2026",
+  "alt": "Medal Wasiyyah Bowling Championship 2026. Bentuk custom mengikut teks 'BOWLING' dengan pin dan bola bowling. Warna biru navy, oren dan biru muda dengan garisan lorong bowling. Reben biru gelap dengan "
+ },
+ {
+  "id": 46,
+  "fail": "hibiscus-friendly-bowling-tournament-2026.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Hibiscus Friendly Bowling Tournament 2026",
+  "alt": "Medal Hibiscus Friendly Bowling Tournament 2026. Bentuk bulat dengan bingkai emas berkilat, latar hitam, bola dan pin bowling di tengah, bunga raya merah di kiri kanan dan kalungan padi emas. Nampak s"
+ },
+ {
+  "id": 51,
+  "fail": "mip-2023-president-s-trophy-bowling-tournament.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "MIP 2023 President's Trophy Bowling Tournament",
+  "alt": "Medal MIP 2023 President's Trophy Bowling Tournament. Bentuk custom dengan pin bowling dan bola timbul di bahagian atas. Warna hijau gelap/hitam dgn teks emas dan logo hijau mint. Gambar tunjuk DUA ve"
+ },
+ {
+  "id": 52,
+  "fail": "piala-penolong-rektor-iceps-johor-pertandingan-bowli.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Piala Penolong Rektor ICEPS Johor — Pertandingan Bowling",
+  "alt": "Medal Piala Penolong Rektor ICEPS Johor, Pertandingan Bowling. Bentuk perisai dgn bingkai merah, latar biru navy, pin bowling putih dan bola merah timbul, bintang emas. Lanyard jalur merah-putih-biru."
+ },
+ {
+  "id": 54,
+  "fail": "piala-penolong-rektor-iceps-johor-bowling-edisi-kedu.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Piala Penolong Rektor ICEPS Johor Bowling — Edisi Kedua",
+  "alt": "Medal Piala Penolong Rektor ICEPS Johor, Pertandingan Bowling Edisi Kedua. Bentuk custom bertanduk/bersayap, latar HITAM dgn neon merah jambu dan biru cyan — design paling moden dan berani dlm koleksi"
+ },
+ {
+  "id": 60,
+  "fail": "pertandingan-boling-akhir-ppki-smk-bandar-tasik-sela.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Pertandingan Boling Akhir PPKI SMK Bandar Tasik Selatan 2024",
+  "alt": "Medal Pertandingan Boling Akhir PPKI SMK Bandar Tasik Selatan 2024. Bentuk custom dgn pin bowling di sudut kanan atas, latar BIRU terang dgn teks putih tebal. Lanyard emas. Gambar tunjuk beberapa kepi"
+ },
+ {
+  "id": 62,
+  "fail": "bowling-2024-design-neon-sign.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Bowling 2024 — design neon sign",
+  "alt": "Medal Bowling 2024 bergaya PAPAN TANDA NEON. Bentuk custom bebas, latar dinding bata gelap dgn tulisan neon kuning menyala dan bola bowling merah neon. Bingkai biru. Reben biru. Contoh design retro/ne"
+ },
+ {
+  "id": 63,
+  "fail": "kskbpj-bowling-tournament-2024.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "KSKBPJ Bowling Tournament 2024",
+  "alt": "Medal KSKBPJ Bowling Tournament 2024. Bentuk custom dinamik dgn pin bowling di kiri, latar putih-merah dgn teks biru berbayang. Lanyard emas bercorak batik biru. Kombinasi lanyard batik + medal moden."
+ },
+ {
+  "id": 65,
+  "fail": "etoile-filante-bowling-2024-sekolah-tun-fatimah.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Etoile Filante Bowling 2024 — Sekolah Tun Fatimah",
+  "alt": "Medal Etoile Filante Bowling 2024, Sekolah Tun Fatimah. Bentuk bulat warna MERAH JAMBU LEMBUT (pastel pink) — satu-satunya medal pink dlm koleksi bowling. Ada pin bowling dan bola berapi, logo bintang"
+ },
+ {
+  "id": 66,
+  "fail": "lightning-strike-deaf-bowling-tournament-2025.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Lightning Strike Deaf Bowling Tournament 2025",
+  "alt": "Medal Lightning Strike Deaf Bowling Tournament 2025 — kejohanan komuniti PEKAK/OKU. Bentuk custom seperti anak panah chevron bertindih dgn 'X' besar di tengah, warna biru royal dan putih, pin bowling "
+ },
+ {
+  "id": 67,
+  "fail": "lightning-strike-deaf-bowling-tournament-2025-kuanti.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Lightning Strike Deaf Bowling Tournament 2025 (kuantiti)",
+  "alt": "Medal Lightning Strike Deaf Bowling Tournament 2025 dlm kuantiti — beberapa keping bersusun dgn lanyard LSDC biru-putih. Tunjuk rupa order penuh untuk satu kejohanan."
+ },
+ {
+  "id": 74,
+  "fail": "anz-bowling-2025-pegangan-tangan.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "ANZ Bowling 2025 (pegangan tangan)",
+  "alt": "Medal ANZ Bowling 2025 diambil dekat dlm genggaman — jelas tunjuk bentuk perisai hitam, logo ANZ biru, pin bowling putih dan teks '2025' tebal. Bagus untuk tunjuk saiz sebenar berbanding tapak tangan."
+ },
+ {
+  "id": 81,
+  "fail": "kejohanan-bowling-zon-air-biru-2025.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Kejohanan Bowling Zon Air Biru 2025",
+  "alt": "Medal Kejohanan Bowling Zon Air Biru 2025. Bentuk custom dgn pin bowling dan bola di atas, gradasi BIRU ke EMAS. Teks 'Kejohanan' dlm tulisan sambung putih. Reben biru gelap."
+ },
+ {
+  "id": 82,
+  "fail": "src-apm-bowling-vi-3rd-placing-men.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "SRC APM Bowling VI — 3rd Placing Men",
+  "alt": "Medal SRC APM Bowling VI, tertulis 'BOWLING 25 MEN 3rd Placing'. Warna COKLAT GANGSA (bronze) dgn pin bowling putih dan kipas emas. Contoh medal yang cetak terus KEDUDUKAN dan KATEGORI pada muka depan"
+ },
+ {
+  "id": 83,
+  "fail": "kejohanan-bowling-zon-air-biru-2025-kuantiti.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Kejohanan Bowling Zon Air Biru 2025 (kuantiti)",
+  "alt": "Medal Kejohanan Bowling Zon Air Biru 2025 dlm kuantiti — tunjuk gradasi biru-emas konsisten merentas banyak keping, dgn lanyard merah-putih-biru bertompok."
+ },
+ {
+  "id": 84,
+  "fail": "worldwide-tournament-bowling-3rd-team-category.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Worldwide Tournament Bowling — 3RD Team Category",
+  "alt": "Medal Worldwide Tournament Bowling, kategori pasukan tempat KETIGA. Bentuk bulat bergerigi dgn bintang di tepi, latar hijau zaitun dgn angka '3RD' besar bergaya logam. Contoh medal kedudukan untuk kat"
+ },
+ {
+  "id": 85,
+  "fail": "mip-2025-president-s-trophy-bowling-tournament.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "MIP 2025 President's Trophy Bowling Tournament",
+  "alt": "Medal MIP 2025 President's Trophy Bowling Tournament. Bentuk custom dgn bola bowling OREN besar di tengah dan pin putih, latar biru navy dgn bingkai oren. Reben oren-hitam. Versi 2025 (bandingkan dgn "
+ },
+ {
+  "id": 92,
+  "fail": "wasiyyah-bowling-championship-2026-kuantiti.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Wasiyyah Bowling Championship 2026 (kuantiti)",
+  "alt": "Medal Wasiyyah Bowling Championship 2026 dlm kuantiti — tunjuk warna navy, oren dan biru muda konsisten merentas banyak keping, dgn lanyard biru bercetak. Sudut berbeza daripada gambar sekeping."
+ },
+ {
+  "id": 93,
+  "fail": "bowling-tournament-2026-sektor-a-the-great.jpg",
+  "kat": "bowling",
+  "kategori": "Bowling",
+  "tajuk": "Bowling Tournament 2026 — Sektor A The Great",
+  "alt": "Medal Bowling Tournament 2026 'Let's Fun Sektor A The Great'. Bentuk custom dgn bola bowling dan letupan warna kosmik (merah jambu, biru, ungu) atas latar gelap. LANYARD SEPADAN bercetak corak sama — "
+ },
+ {
+  "id": 3,
+  "fail": "tm-run-7km-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "TM Run 7KM 2025",
+  "alt": "Medal larian TM RUN 7KM 2025, anjuran Kelab Berbasikal Mahsari dan Yayasan Mahsari di Dataran Mahsari, Tanah Merah. Bentuk bulat dengan tekstur kelabu marble, teks 'TM RUN' merah-biru dan dua silhouet"
+ },
+ {
+  "id": 4,
+  "fail": "larian-minda-sihat-ppki-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Larian Minda Sihat PPKI 2025",
+  "alt": "Medal Larian Minda Sihat PPKI 2025 — larian sekolah program pendidikan khas. Bentuk custom bulat bergerigi, warna gelap dengan gradasi biru-ungu-merah jambu neon dan silhouette pelari. Lanyard dua war"
+ },
+ {
+  "id": 7,
+  "fail": "tm-run-7km-2025-kuantiti-pukal.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "TM Run 7KM 2025 (kuantiti pukal)",
+  "alt": "Medal TM RUN 7KM 2025 dalam kuantiti — beberapa keping bersusun dengan lanyard merah-putih-biru bercetak penuh. Bagus untuk tunjuk kepada customer rupa order pukal, bukan satu keping."
+ },
+ {
+  "id": 9,
+  "fail": "lotte-chemical-titan-fun-run-3km-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Lotte Chemical Titan Fun Run 3KM 2025",
+  "alt": "Medal Fun Run 3KM Finisher 2025 anjuran Lotte Chemical Titan — larian korporat. Bentuk custom mengikut teks 'FUN RUN'. Warna terang biru, merah, oren dengan lima silhouette pelari pelbagai warna. Teks"
+ },
+ {
+  "id": 10,
+  "fail": "coop-fun-run-2025-5km-7km.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Coop Fun Run 2025 (5KM & 7KM)",
+  "alt": "Medal Coop Fun Run 2025 untuk kategori 5KM dan 7KM. Bentuk custom bulat dengan bahagian atas bertingkat. Latar perak brushed metal, pelari dalam gradasi biru-oren, teks 'COOP FUN RUN 2025' dan pita '5"
+ },
+ {
+  "id": 15,
+  "fail": "unity-fun-walk-minggu-perpaduan-selangor-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Unity Fun Walk Minggu Perpaduan Selangor 2025",
+  "alt": "Medal Unity Fun Walk sempena Sambutan Minggu Perpaduan 2025 Peringkat Negeri Selangor. Bentuk custom mengikut susunan teks. Warna biru muda dengan silhouette dua orang berjalan dan logo 'Kembara Perpa"
+ },
+ {
+  "id": 16,
+  "fail": "fun-walk-merdeka-2025-tadika-ar-rasyidin.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Fun Walk Merdeka 2025 Tadika Ar Rasyidin",
+  "alt": "Medal Fun Walk Merdeka 2025 untuk Tadika Ar Rasyidin. Bentuk custom silhouette orang mengangkat tangan. Warna cerah biru, ungu, merah jambu, kuning dengan logo tadika. Lanyard jalur merah-putih-biru. "
+ },
+ {
+  "id": 17,
+  "fail": "botanic-merdeka-fun-run.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Botanic Merdeka Fun Run",
+  "alt": "Medal Botanic Merdeka Fun Run. Bentuk bulat acrylic lut sinar dengan design hijau dan biru — pelari memakai jubah merah, garisan kelajuan dan trek berpetak. Teks 'BOTANIC MERDEKA FUN RUN'. Reben merah"
+ },
+ {
+  "id": 19,
+  "fail": "unity-fun-walk-perpaduan-selangor-2025-kuantiti.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Unity Fun Walk Perpaduan Selangor 2025 (kuantiti)",
+  "alt": "Medal Unity Fun Walk Minggu Perpaduan Selangor 2025 dalam kuantiti, dengan lanyard bercetak 'Selangor' warna merah-oren. Tunjuk order pukal untuk acara peringkat negeri."
+ },
+ {
+  "id": 20,
+  "fail": "fun-run-kemerdekaan-hari-malaysia-2025-tnb-genco.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Fun Run Kemerdekaan & Hari Malaysia 2025 (TNB Genco)",
+  "alt": "Medal Fun Run Kemerdekaan & Hari Malaysia 2025 anjuran TNB Genco. Bentuk custom, latar hitam dengan silhouette pelari dan pancaran warna biru, merah jambu, kuning. Ada beberapa logo penganjur di sebel"
+ },
+ {
+  "id": 22,
+  "fail": "bemang-run-2-0-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Bemang Run 2.0 2025",
+  "alt": "Medal Bemang Run 2.0 2025. Bentuk bulat biru gelap dengan pelari dan kesan api oren-kuning di belakang. Teks 'BEMANG RUN 2.0' melengkung dan '2025'. Reben biru berkilat. Digantung pada mannequin di ga"
+ },
+ {
+  "id": 28,
+  "fail": "smb-jubli-run-2025-jubli-intan-smk-benut-60-tahun.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "SMB Jubli Run 2025 — Jubli Intan SMK Benut 60 Tahun",
+  "alt": "Medal SMB Jubli Run 2025 sempena Sambutan Jubli Intan SMK Benut (1965-2025, 60 tahun). Bentuk custom dengan angka '60' besar berkilat emas dan pelari emas di sebelah kanan. Latar hitam. Reben emas. Co"
+ },
+ {
+  "id": 29,
+  "fail": "fun-run-heart-2-heart-2024-fun-run-desa-1-0-2024.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Fun Run Heart 2 Heart 2024 & Fun Run Desa 1.0 2024",
+  "alt": "Dua medal fun run bersebelahan: 'FUN RUN Heart 2 Heart 2024' (kuning, silhouette pelari biru) dan 'FUN RUN DESA 1.0 2024 Layby Bukit Gantang Utara' (biru-hijau neon dengan kumpulan pelari). Bagus untu"
+ },
+ {
+  "id": 35,
+  "fail": "fun-run-walk-2025-langkah-sihat-jiwa-ceria.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Fun Run & Walk 2025 — Langkah Sihat Jiwa Ceria",
+  "alt": "Medal Fun Run & Walk 2025 'Langkah Sihat Jiwa Ceria'. Bentuk custom dengan bingkai ungu tebal, corak batik/awan kuning di dalam dan silhouette pelari ungu. Reben ungu-perak. Warna ungu-kuning yang men"
+ },
+ {
+  "id": 36,
+  "fail": "fun-run-walk-2025-langkah-sihat-kuantiti.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Fun Run & Walk 2025 Langkah Sihat (kuantiti)",
+  "alt": "Medal Fun Run & Walk 2025 Langkah Sihat Jiwa Ceria dalam kuantiti dengan lanyard bercetak 'JABATAN KESIHATAN'. Tunjuk order pukal untuk acara jabatan kerajaan."
+ },
+ {
+  "id": 37,
+  "fail": "kids-dash-challenge-4-al-aqsa-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Kids Dash Challenge 4 Al-Aqsa 2025",
+  "alt": "Medal Kids Dash Challenge 4 Al-Aqsa 2025 — larian kanak-kanak bertema solidariti Palestin. Bentuk custom dengan Masjid Al-Aqsa (kubah emas), bendera Palestin, kaffiyeh dan silhouette budak berlari. Wa"
+ },
+ {
+  "id": 75,
+  "fail": "sarong-pdrm-run-2025-finisher-5km-10km.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Sarong PDRM Run 2025 — Finisher 5KM & 10KM",
+  "alt": "Medal Sarong PDRM Run 2025 Finisher, kategori 5KM & 10KM. Bentuk custom, latar putih dgn BUNGA RAYA merah, pelari merah jambu, logo PDRM dan gambar latar bandar. Lanyard merah jambu bercetak. Contoh m"
+ },
+ {
+  "id": 76,
+  "fail": "pinky-fun-walk-2-0-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Pinky Fun Walk 2.0 2025",
+  "alt": "Medal Pinky Fun Walk 2.0 2025. Bentuk custom, latar kelabu gelap dgn teks 'pinky' dlm tulisan sambung MERAH JAMBU terang dan 'FUN WALK' hitam-putih tebal. Lanyard merah jambu berbunga. Design bersih d"
+ },
+ {
+  "id": 78,
+  "fail": "pinky-fun-walk-2-0-2025-pegangan-dekat.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Pinky Fun Walk 2.0 2025 (pegangan dekat)",
+  "alt": "Medal Pinky Fun Walk 2.0 2025 diambil dekat — jelas tunjuk kualiti cetakan warna merah jambu dan kelabu serta lanyard berbunga."
+ },
+ {
+  "id": 79,
+  "fail": "the-gahalon-2025-fun-run.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "The Gahalon 2025 Fun Run",
+  "alt": "Medal The Gahalon 2025 FUN RUN — versi larian (berbeza dgn medal Gahalon obstacle yang perak). Bentuk custom, latar putih dgn kumpulan pelari warna biru, oren dan merah bergaya geometri. Lanyard putih"
+ },
+ {
+  "id": 80,
+  "fail": "kids-dash-challenge-4-al-aqsa-2025-pegangan-tangan.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Kids Dash Challenge 4 Al-Aqsa 2025 (pegangan tangan)",
+  "alt": "Medal Kids Dash Challenge 4 Al-Aqsa 2025 dipegang di tangan — jelas tunjuk kubah emas Masjid Al-Aqsa, bendera Palestin, kaffiyeh dan teks kuning. Reben hijau. Sudut berbeza daripada gambar pukal."
+ },
+ {
+  "id": 86,
+  "fail": "fun-walk-teroka-kampung-kampung-panchor.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Fun Walk Teroka Kampung — Kampung Panchor",
+  "alt": "Medal Fun Walk 'Teroka Kampung' Kampung Panchor. Bentuk custom, latar biru muda dgn pokok kelapa, sekumpulan peserta berpimpin tangan dan sepanduk merah. Lanyard biru-kuning. Contoh medal acara komuni"
+ },
+ {
+  "id": 88,
+  "fail": "beach-walk-pantai-batu-hitam-finisher-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Beach Walk @Pantai Batu Hitam — Finisher 2025",
+  "alt": "Medal Beach Walk @Pantai Batu Hitam Finisher, 13 Disember 2025. Bentuk custom dgn OMBAK biru besar, pokok kelapa, silhouette peserta di pantai dan bendera Palestin dgn hashtag #standWithPalestine. War"
+ },
+ {
+  "id": 89,
+  "fail": "batik-fun-run-2025-uthm-kemas.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Batik Fun Run 2025 — UTHM & KEMAS",
+  "alt": "Medal Batik Fun Run 2025, anjuran UTHM dan KEMAS. Bentuk custom dgn teks besar bercorak BATIK sebenar di dalam huruf, warna oren dan coklat dgn silhouette pelari. Reben merah-kuning dgn tab kulit hita"
+ },
+ {
+  "id": 91,
+  "fail": "future-night-run-2025.jpg",
+  "kat": "funrun",
+  "kategori": "Fun Run",
+  "tajuk": "Future Night Run 2025",
+  "alt": "Medal Future Night Run 2025 — larian waktu malam. Bentuk custom dgn teks 'RUN' besar dan tiga silhouette pelari, gradasi MERAH-OREN-KUNING seperti api. Reben merah-kuning dgn tab kulit hitam. Angka '2"
+ },
+ {
+  "id": 12,
+  "fail": "epsilon-merdeka-challenge-2025.jpg",
+  "kat": "korporat",
+  "kategori": "Korporat & Komuniti",
+  "tajuk": "Epsilon Merdeka Challenge 2025",
+  "alt": "Medal Epsilon Merdeka Challenge 2025. Bentuk custom mengikut Jalur Gemilang berkoyak (torn flag effect) — biru, merah, putih dan kuning. Teks 'EPSILON MERDEKA CHALLENGE 2025'. Lanyard bercetak 'EXCELL"
+ },
+ {
+  "id": 32,
+  "fail": "program-komuniti-anak-betau-pintar-2025-malaysia-un.jpg",
+  "kat": "korporat",
+  "kategori": "Korporat & Komuniti",
+  "tajuk": "Program Komuniti Anak Betau Pintar 2025 (Malaysia-UN SDG)",
+  "alt": "Medal Program Komuniti: Anak Betau Pintar 2025, Malaysia-UN SDG Trust Fund bersama USM dan APEX. Bentuk bulat, muka depan putih dengan bingkai biru navy dan logo penaja. Muka belakang tunjuk roda warn"
+ },
+ {
+  "id": 33,
+  "fail": "the-gahalon-2025-depan.jpg",
+  "kat": "korporat",
+  "kategori": "Korporat & Komuniti",
+  "tajuk": "The Gahalon 2025 (depan)",
+  "alt": "Medal The Gahalon 2025 — Mieco Ganai Challenge. Bentuk custom besar bergaya futuristik/mekanikal dengan bingkai perak dan pita ungu-oren gradasi. Logo berwarna di tengah. Reben perak. Design paling ko"
+ },
+ {
+  "id": 34,
+  "fail": "the-gahalon-2025-belakang-finisher-2-sided.jpg",
+  "kat": "korporat",
+  "kategori": "Korporat & Komuniti",
+  "tajuk": "The Gahalon 2025 — belakang Finisher (2 sided)",
+  "alt": "Bahagian BELAKANG medal The Gahalon 2025 — putih bersih dengan teks 'TESTED BY TERRAIN, PROVEN BY PAIN', 'THE GAHALON 2025' dan 'FINISHER'. Lanyard corak merah jambu. Contoh medal 2 sided di mana bela"
+ },
+ {
+  "id": 2,
+  "fail": "kejohanan-memanah-tradisional-mssd-kerian-2025.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Memanah Tradisional MSSD Kerian 2025",
+  "alt": "Medal memanah tradisional untuk MSSD Kerian 2025. Bentuk custom mengikut logo — pemanah menarik busur dengan anak panah dan sasaran bulatan di belakang. Warna kuning emas, hitam dan putih. Teks 'KEJOH"
+ },
+ {
+  "id": 6,
+  "fail": "kejohanan-memanah-tradisional-mssd-kerian-2025-lanya.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Memanah Tradisional MSSD Kerian 2025 (lanyard kuning)",
+  "alt": "Medal memanah MSSD Kerian 2025 — sama design dengan Image 1, tetapi gambar ini tunjuk lanyard kuning bercetak penuh 'KEJOHANAN MEMANAH TRADISIONAL MSSD KERIAN' dan reben merah di clip. Bagus untuk tun"
+ },
+ {
+  "id": 30,
+  "fail": "petala-open-2025-petaling-archery-depan.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Petala Open 2025 — Petaling Archery (depan)",
+  "alt": "Medal Petala Open 2025 anjuran Petaling Archery. Bentuk custom bulat bergerigi di tepi. Warna putih, biru royal dan merah dengan corak anak panah bergaya. Teks 'PETALING ARCHERY - PETALA OPEN - OPEN 2"
+ },
+ {
+  "id": 31,
+  "fail": "petala-open-2025-bahagian-belakang-2-sided.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Petala Open 2025 — bahagian belakang (2 sided)",
+  "alt": "Bahagian BELAKANG medal Petala Open 2025 — warna emas dengan teks 'KEJOHANAN MEMANAH TERBUKA PETALING', kategori 'RECURVE LELAKI U12', pencapaian 'JOHAN' dan 'QUALIFICATION ROUND'. CONTOH TERBAIK untu"
+ },
+ {
+  "id": 39,
+  "fail": "aim-with-iman-2025-pkpi-sjjc-klang.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Aim With Iman 2025 — PKPI SJJC Klang",
+  "alt": "Medal 'AIM WITH IMAN 2025' PKPI SJJC Klang — kejohanan memanah. Bentuk custom dengan pemanah dan anak panah bergaya. Warna kuning, merah dan hitam. Lanyard panjang merah-hitam-putih bercetak penuh 'AI"
+ },
+ {
+  "id": 47,
+  "fail": "petala-open-2025-pegangan-tangan.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Petala Open 2025 (pegangan tangan)",
+  "alt": "Medal Petala Open 2025 Petaling Archery dipegang di tangan atas latar meja kayu — tunjuk saiz sebenar berbanding tapak tangan. Warna putih, biru royal dan merah. Lanyard biru-putih corak kilat."
+ },
+ {
+  "id": 57,
+  "fail": "kejohanan-memanah-sabak-bernam-2024.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Memanah Sabak Bernam 2024",
+  "alt": "Medal Kejohanan Memanah Sabak Bernam 2024. Bentuk custom, warna teal/biru petrol dgn pemanah dan corak merah jambu terang. Lanyard ungu-biru bercetak. Versi 2024 (bandingkan dgn versi 2025 yang ungu)."
+ },
+ {
+  "id": 64,
+  "fail": "kejohanan-memanah-recurve-terbuka-2024.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Memanah Recurve Terbuka 2024",
+  "alt": "Medal Kejohanan Memanah Recurve Terbuka 2024. Bentuk custom bertepi tajam (spike), warna teal dan oren gradasi dgn corak halftone bertitik dan ilustrasi pemanah. Lanyard biru-putih bercorak geometri."
+ },
+ {
+  "id": 70,
+  "fail": "kejohanan-memanah-tahara-2025-target-hub-archer-s-ra.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Memanah TAHARA 2025 — Target Hub Archer's Rally",
+  "alt": "Medal Kejohanan Memanah TAHARA 2025, Target Hub Archer's Rally Championship (Juniors), 31 Mei - 1 Jun 2025. Bentuk bulat bingkai KUNING terang, latar hitam dgn sasaran biru. Gantungan berbentuk ANAK P"
+ },
+ {
+  "id": 71,
+  "fail": "kejohanan-memanah-sabak-bernam-2025.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Memanah Sabak Bernam 2025",
+  "alt": "Medal Kejohanan Memanah Sabak Bernam 2025. Bentuk custom dgn pemanah gaya kristal/low-poly warna UNGU dan biru, bulatan kuning di belakang. Lanyard ungu-putih bercetak. Versi 2025 (bandingkan dgn vers"
+ },
+ {
+  "id": 72,
+  "fail": "msss-memanah-negeri-sabah-2025-depan-belakang.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "MSSS Memanah Negeri Sabah 2025 (depan & belakang)",
+  "alt": "Medal MSSS Memanah Negeri Sabah 2025. Bentuk perisai dgn peta Sabah di tengah, warna merah, biru dan putih, dua pemanah di atas. Gambar tunjuk SEKALI bahagian BELAKANG (putih berfros) yang bertulis ka"
+ },
+ {
+  "id": 87,
+  "fail": "kejohanan-bakat-memanah-lahad-datu-2024.jpg",
+  "kat": "memanah",
+  "kategori": "Memanah",
+  "tajuk": "Kejohanan Bakat Memanah Lahad Datu 2024",
+  "alt": "Medal Kejohanan Bakat Memanah Lahad Datu 2024 (Sabah). Bentuk perisai dgn bingkai putih, latar MERAH dan BIRU, dua pemanah biru dan merah di atas. Reben merah-hitam. Dipamerkan di dinding galeri."
+ },
+ {
+  "id": 49,
+  "fail": "edu-league-cup-2025-set-johan-naib-johan-ketiga.jpg",
+  "kat": "set",
+  "kategori": "Set Emas Perak Gangsa",
+  "tajuk": "Edu League Cup 2025 — set Johan / Naib Johan / Ketiga",
+  "alt": "TIGA medal Edu League Cup 2025 bersebelahan menunjukkan PERBEZAAN WARNA mengikut kedudukan: EMAS untuk 'JOHAN', PERAK untuk 'NAIB JOHAN', dan GANGSA/tembaga untuk 'KETIGA'. Semua guna design dan logo "
+ },
+ {
+  "id": 50,
+  "fail": "batu-open-set-4-warna-qualification-round-recurve.jpg",
+  "kat": "set",
+  "kategori": "Set Emas Perak Gangsa",
+  "tajuk": "Batu Open — set 4 warna Qualification Round Recurve",
+  "alt": "EMPAT medal Batu Open (memanah, Qualification Round Recurve Men Open) menunjukkan empat warna untuk empat kedudukan: PERTAMA (emas), KEDUA (perak), KETIGA (oren/gangsa) dan KEEMPAT (ungu muda). Bentuk"
+ },
+ {
+  "id": 5,
+  "fail": "sports-day-as-sakeenah-2025.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Sports Day As Sakeenah 2025",
+  "alt": "Medal Sports Day sekolah As Sakeenah 2025. Bentuk custom mengikut watak kartun budak lelaki berkaca mata memakai jersi oren. Warna ungu, oren dan putih. Teks 'SPORTS DAY 25', 'As Sakeenah', moto 'Sole"
+ },
+ {
+  "id": 14,
+  "fail": "sukaneka-prasekolah-skamba-2025.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Sukaneka Prasekolah SKAMBA 2025",
+  "alt": "Medal Sukaneka Prasekolah SKAMBA 2025. Bentuk bulat warna kuning dengan ilustrasi kartun budak berkaca mata memegang bola sepak dan rubik, dikelilingi ikon mainan. Teks 'SUKANEKA PRASEKOLAH 2025 SKAMB"
+ },
+ {
+  "id": 18,
+  "fail": "sukaneka-prasekolah-skamba-2025-kuantiti.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Sukaneka Prasekolah SKAMBA 2025 (kuantiti)",
+  "alt": "Medal Sukaneka Prasekolah SKAMBA 2025 dipegang beberapa keping sekali gus, dengan lanyard kuning. Tunjuk rupa sebenar bila order untuk satu kelas / satu sekolah."
+ },
+ {
+  "id": 25,
+  "fail": "piala-guru-besar-skts-hoki-7-a-side-2025.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Piala Guru Besar SKTS Hoki 7-A-Side 2025",
+  "alt": "Medal Hoki 7-A-Side Piala Guru Besar SKTS 2025, Peringkat Kebangsaan, Segamat Johor. Bentuk custom mengikut kayu hoki melengkung. Warna hitam, kuning dan biru dengan tekstur bola hoki. Reben biru gela"
+ },
+ {
+  "id": 26,
+  "fail": "piala-guru-besar-skts-hoki-2025-kuantiti.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Piala Guru Besar SKTS Hoki 2025 (kuantiti)",
+  "alt": "Medal Hoki 7-A-Side SKTS 2025 dalam kuantiti — beberapa keping dengan lanyard kuning-biru bercetak 'SINCERE'. Tunjuk order untuk kejohanan penuh."
+ },
+ {
+  "id": 42,
+  "fail": "karnival-sukan-tahunan-kampung-baru-sri-aman-2025.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Karnival Sukan Tahunan Kampung Baru Sri Aman 2025",
+  "alt": "Medal Karnival Sukan Tahunan Kampung Baru Sri Aman 2025. Bentuk custom mengikut susunan teks berwarna-warni, dengan kalungan daun dan ikon sukan (bola sepak, pelari, badminton) di sebelah kanan. Warna"
+ },
+ {
+  "id": 43,
+  "fail": "bola-jaring-champion.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Bola Jaring Champion",
+  "alt": "Medal 'BOLA JARING CHAMPION'. Bentuk custom dengan latar putih dan percikan cat warna-warni (hijau, biru, oren, ungu) serta silhouette pemain meraikan kemenangan. Reben biru gelap bercorak. Sesuai unt"
+ },
+ {
+  "id": 90,
+  "fail": "karnival-sukan-kampung-baru-sri-aman-2025-pegangan.jpg",
+  "kat": "sekolah",
+  "kategori": "Sukan Sekolah",
+  "tajuk": "Karnival Sukan Kampung Baru Sri Aman 2025 (pegangan)",
+  "alt": "Medal Karnival Sukan Tahunan Kampung Baru Sri Aman 2025 dipegang di tangan — jelas tunjuk teks berwarna-warni bertindan, kalungan daun dan ikon sukan. Sudut berbeza daripada gambar berbaring."
+ }
+]
