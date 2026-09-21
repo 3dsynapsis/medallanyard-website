@@ -13,7 +13,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:ital,wght@0,400..800;1,400..600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#081f16">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/gerak.css">
+<script>
+  /* Animasi Motion hanya bila pengguna TAK matikan animasi. Kelas "gerak"
+     sorok elemen sebelum dianimasi; gerak.js buang kelas ini kalau
+     pustaka Motion gagal dimuat — kandungan tak boleh hilang. */
+  if (!window.matchMedia || !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('gerak');
+  }
+</script>
 <!-- Google tag (gtag.js) — Google Ads + Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-939345913"></script>
 <script>
@@ -25,6 +35,40 @@
 </script>
 </head>
 <body>
+
+<a class="langkau" href="#kenapa">Langkau ke kandungan</a>
+
+<!-- Ikon SVG (gaya Lucide) — ganti emoji supaya rupa sama di semua peranti -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1.2"/><circle cx="17.5" cy="10.5" r="1.2"/><circle cx="8.5" cy="7.5" r="1.2"/><circle cx="6.5" cy="12.5" r="1.2"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.83-.44-1.12-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M4 18h16"/><path d="M12 2 20 7H4z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-medal" viewBox="0 0 24 24"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/><path d="M12 18v-2h-.5"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-tree" viewBox="0 0 24 24"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></symbol>
+    <symbol id="i-ribbon" viewBox="0 0 24 24"><path d="M12 11.22C11 10 10 9 10 8a2 2 0 0 1 4 0c0 1-1 2-2.01 3.22"/><path d="m12 18 2.57-3.5"/><path d="M6.24 9.02a7 7 0 0 1 11.51-.01"/><path d="M9.35 14.53 12 11.22"/><path d="M9.35 14.53C7.73 12.25 6 10.22 6 7a6 6 0 0 1 12 0c0 3.22-1.78 5.24-3.43 7.5l3.56 4.53a1 1 0 0 1-.2 1.43l-1.9 1.36a1 1 0 0 1-1.38-.22L12 18l-2.68 3.59a1 1 0 0 1-1.39.21l-1.86-1.35a1 1 0 0 1-.2-1.42z"/></symbol>
+    <symbol id="i-shapes" viewBox="0 0 24 24"><path d="M8.3 10a.7.7 0 0 1-.63-1.08L11.4 3a.7.7 0 0 1 1.2-.04L16.3 8.9a.7.7 0 0 1-.57 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1.2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-kiri" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-kanan" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-bawah" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.53 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></symbol>
+  </defs>
+</svg>
+
+<!-- bar kemajuan skrol -->
+<div class="bar-skrol" aria-hidden="true"></div>
 
 <!-- jalur riben logo: hijau-merah-hijau -->
 <div class="riben-atas" aria-hidden="true"></div>
@@ -46,7 +90,18 @@
       <svg class="ikon-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.2.8 1.3 1.7 2.1 3 2.8.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.2.6.4 0 .1 0 .7-.2 1.5Z"/></svg>
       WhatsApp
     </a>
+    <button class="btn-menu" id="btnMenu" aria-expanded="false" aria-controls="menuMobil" aria-label="Buka menu">
+      <svg class="ik"><use href="#i-menu"/></svg>
+    </button>
   </div>
+  <nav class="menu-mobil" id="menuMobil" aria-label="Navigasi mobile" hidden>
+    <a href="#kenapa">Kenapa Kami</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#harga">Harga</a>
+    <a href="#proses">Cara Tempah</a>
+    <a href="#lawat">Lawat Kami</a>
+    <a href="#faq">Soalan Lazim</a>
+  </nav>
 </header>
 
 <main id="atas">
@@ -67,16 +122,49 @@
         <a class="btn btn-garis" href="#galeri">Lihat Galeri Medal</a>
       </div>
       <ul class="hero-chip muncul t4">
-        <li>⚡ Siap 9 hari</li>
-        <li>🎨 Free design</li>
-        <li>🏛️ Galeri di Shah Alam</li>
+        <li><svg class="ik"><use href="#i-zap"/></svg> Siap 9 hari</li>
+        <li><svg class="ik"><use href="#i-palette"/></svg> Free design</li>
+        <li><svg class="ik"><use href="#i-landmark"/></svg> Galeri di Shah Alam</li>
         <li><svg class="bendera" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#fff"/><g fill="#cc0001"><rect y="0" width="28" height="1.43"/><rect y="2.86" width="28" height="1.43"/><rect y="5.71" width="28" height="1.43"/><rect y="8.57" width="28" height="1.43"/><rect y="11.43" width="28" height="1.43"/><rect y="14.29" width="28" height="1.43"/><rect y="17.14" width="28" height="1.43"/></g><rect width="14" height="11.43" fill="#010066"/><circle cx="5.4" cy="5.8" r="3.3" fill="#ffcc00"/><circle cx="6.6" cy="5.8" r="2.8" fill="#010066"/><polygon fill="#ffcc00" points="9.90,3.10 10.13,4.78 11.07,3.37 10.55,4.98 12.01,4.12 10.85,5.34 12.53,5.20 10.95,5.80 12.53,6.40 10.85,6.26 12.01,7.48 10.55,6.62 11.07,8.23 10.13,6.82 9.90,8.50 9.67,6.82 8.73,8.23 9.25,6.62 7.79,7.48 8.95,6.26 7.27,6.40 8.85,5.80 7.27,5.20 8.95,5.34 7.79,4.12 9.25,4.98 8.73,3.37 9.67,4.78"/></svg> Buatan Malaysia</li>
       </ul>
     </div>
     <figure class="hero-foto muncul t2">
-      <img src="assets/galeri/hero-koleksi.jpg" alt="Koleksi medal custom sebenar buatan Medal Lanyard Malaysia — pelbagai bentuk dan lanyard bercetak penuh" width="1200" height="1432" fetchpriority="high">
+      <img class="hero-lencana" src="assets/logo.png" alt="" aria-hidden="true" width="108" height="112">
+      <div class="hero-kilau" aria-hidden="true"></div>
+      <img class="hero-utama" src="assets/galeri/hero-koleksi.jpg" alt="Koleksi medal custom sebenar buatan Medal Lanyard Malaysia — pelbagai bentuk dan lanyard bercetak penuh" width="1200" height="1432" fetchpriority="high">
       <figcaption>Medal sebenar yang kami siapkan untuk penganjur event seluruh Malaysia</figcaption>
     </figure>
+  </div>
+
+  <!-- angka ringkas — semua fakta dari seksyen lain laman ini -->
+  <div class="wrap">
+    <dl class="angka">
+      <div class="angka-item"><dt>Siap seawal</dt><dd><span class="kira" data-ke="9">9</span> hari</dd></div>
+      <div class="angka-item"><dt>Harga bermula</dt><dd>RM<span class="kira" data-ke="10.56" data-perpuluhan="2">10.56</span></dd></div>
+      <div class="angka-item"><dt>Diskaun pukal</dt><dd>sehingga <span class="kira" data-ke="30">30</span>%</dd></div>
+      <div class="angka-item"><dt>Contoh dalam galeri</dt><dd><span class="kira" data-ke="92">92</span> medal</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══════════ JALUR EVENT (marquee) ═══════════ -->
+<section class="jalur-event" aria-label="Antara event yang kami siapkan medal">
+  <p class="jalur-tajuk">Antara event yang pernah kami siapkan</p>
+  <div class="jalur-trek">
+    <ul class="jalur-isi">
+      <li>TM Run 7KM</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>GLICs Football Tournament</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Lotte Chemical Titan Fun Run</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Para Badminton MSN-Allianz-BAM</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Petala Open — Petaling Archery</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Unity Fun Walk Minggu Perpaduan Selangor</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>MIP President's Trophy Bowling</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Skypark Merdeka Pushbike Cup</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Edu League Cup</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Kejohanan Memanah MSSD Kerian</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Epsilon Merdeka Challenge</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+      <li>Karnival Bola Sepak TKFC Cup U12</li><li><svg class="ik"><use href="#i-star"/></svg></li>
+    </ul>
   </div>
 </section>
 
@@ -88,7 +176,7 @@
     <div class="kad-grid">
       <article class="kad reveal">
         <div class="kad-no">01</div>
-        <div class="kad-ikon">⚡</div>
+        <div class="kad-ikon"><svg class="ik"><use href="#i-zap"/></svg></div>
         <h3>Siap dalam 9 hari</h3>
         <p>Tak perlu tunggu sebulan lebih macam tempahan dari luar negara. Design diluluskan hari ini — medal di tangan anda dalam 9&nbsp;hari.</p>
       </article>
@@ -100,13 +188,13 @@
       </article>
       <article class="kad reveal">
         <div class="kad-no">03</div>
-        <div class="kad-ikon">🏛️</div>
+        <div class="kad-ikon"><svg class="ik"><use href="#i-landmark"/></svg></div>
         <h3>Galeri fizikal di Shah Alam</h3>
         <p>Datang pegang dan rasa sendiri kualiti medal kami sebelum buat tempahan. Bukan sekadar gambar cantik di skrin.</p>
       </article>
       <article class="kad reveal">
         <div class="kad-no">04</div>
-        <div class="kad-ikon">🎨</div>
+        <div class="kad-ikon"><svg class="ik"><use href="#i-palette"/></svg></div>
         <h3>Warna tajam + free design</h3>
         <p>Cetakan warna yang tajam, hidup dan berkilau — dan designer kami sediakan design <strong>percuma</strong>, dipinda sehingga anda benar-benar puas hati.</p>
       </article>
@@ -121,7 +209,7 @@
     <h2 class="tajuk-seksyen tengah putih reveal">Import dari luar negara <em class="emas">vs</em> tempah dengan kami</h2>
     <p class="sub-seksyen tengah reveal">Ramai penganjur pernah terkena — medal sampai lambat, ejaan silap, warna lari. Bila event dah ada tarikh, setiap hari itu penting.</p>
     <div class="banding2 reveal">
-      <div class="b2-pita">PILIHAN<br>BIJAK<span>★</span></div>
+      <div class="b2-pita">PILIHAN<br>BIJAK<span><svg class="ik"><use href="#i-star"/></svg></span></div>
 
       <div class="b2-baris b2-head">
         <div class="b2-label" aria-hidden="true"></div>
@@ -130,38 +218,38 @@
       </div>
 
       <div class="b2-baris">
-        <div class="b2-label"><span class="b2-ikon">🕐</span>Tempoh</div>
-        <div class="b2-import"><span class="tanda tanda-x">✕</span><p>30 – 45 hari atau lebih</p></div>
-        <div class="b2-kami"><span class="tanda tanda-ok">✓</span><p>Siap seawal <strong>9 hari</strong></p></div>
+        <div class="b2-label"><span class="b2-ikon"><svg class="ik"><use href="#i-clock"/></svg></span>Tempoh</div>
+        <div class="b2-import"><span class="tanda tanda-x" aria-label="Tidak"><svg class="ik"><use href="#i-x"/></svg></span><p>30 – 45 hari atau lebih</p></div>
+        <div class="b2-kami"><span class="tanda tanda-ok" aria-label="Ya"><svg class="ik"><use href="#i-check"/></svg></span><p>Siap seawal <strong>9 hari</strong></p></div>
       </div>
 
       <div class="b2-baris">
-        <div class="b2-label"><span class="b2-ikon">💬</span>Bahasa</div>
-        <div class="b2-import"><span class="tanda tanda-x">✕</span><p>Komunikasi bahasa asing, mudah terjadi salah faham</p></div>
-        <div class="b2-kami"><span class="tanda tanda-ok">✓</span><p>Bahasa Melayu / English — mudah &amp; tepat</p></div>
+        <div class="b2-label"><span class="b2-ikon"><svg class="ik"><use href="#i-chat"/></svg></span>Bahasa</div>
+        <div class="b2-import"><span class="tanda tanda-x" aria-label="Tidak"><svg class="ik"><use href="#i-x"/></svg></span><p>Komunikasi bahasa asing, mudah terjadi salah faham</p></div>
+        <div class="b2-kami"><span class="tanda tanda-ok" aria-label="Ya"><svg class="ik"><use href="#i-check"/></svg></span><p>Bahasa Melayu / English — mudah &amp; tepat</p></div>
       </div>
 
       <div class="b2-baris">
-        <div class="b2-label"><span class="b2-ikon">✏️</span>Design</div>
-        <div class="b2-import"><span class="tanda tanda-x">✕</span><p>Design silap atau warna lari — dan sukar dipinda</p></div>
-        <div class="b2-kami"><span class="tanda tanda-ok">✓</span><p>Design ditunjuk dahulu &amp; pinda <strong>percuma</strong> sebelum cetak</p></div>
+        <div class="b2-label"><span class="b2-ikon"><svg class="ik"><use href="#i-pen"/></svg></span>Design</div>
+        <div class="b2-import"><span class="tanda tanda-x" aria-label="Tidak"><svg class="ik"><use href="#i-x"/></svg></span><p>Design silap atau warna lari — dan sukar dipinda</p></div>
+        <div class="b2-kami"><span class="tanda tanda-ok" aria-label="Ya"><svg class="ik"><use href="#i-check"/></svg></span><p>Design ditunjuk dahulu &amp; pinda <strong>percuma</strong> sebelum cetak</p></div>
       </div>
 
       <div class="b2-baris">
-        <div class="b2-label"><span class="b2-ikon">📦</span>Sampel</div>
-        <div class="b2-import"><span class="tanda tanda-x">✕</span><p>Tak dapat lihat &amp; pegang barang sebelum bayar</p></div>
-        <div class="b2-kami"><span class="tanda tanda-ok">✓</span><p>Datang galeri kami di Shah Alam, pegang sendiri kualitinya</p></div>
+        <div class="b2-label"><span class="b2-ikon"><svg class="ik"><use href="#i-box"/></svg></span>Sampel</div>
+        <div class="b2-import"><span class="tanda tanda-x" aria-label="Tidak"><svg class="ik"><use href="#i-x"/></svg></span><p>Tak dapat lihat &amp; pegang barang sebelum bayar</p></div>
+        <div class="b2-kami"><span class="tanda tanda-ok" aria-label="Ya"><svg class="ik"><use href="#i-check"/></svg></span><p>Datang galeri kami di Shah Alam, pegang sendiri kualitinya</p></div>
       </div>
 
       <div class="b2-baris">
-        <div class="b2-label"><span class="b2-ikon">🎧</span>After Sales</div>
-        <div class="b2-import"><span class="tanda tanda-x">✕</span><p>Penjual jauh, respon lambat, sukar dihubungi</p></div>
-        <div class="b2-kami"><span class="tanda tanda-ok">✓</span><p>Kami di sini — senang hubungi, cepat selesai</p></div>
+        <div class="b2-label"><span class="b2-ikon"><svg class="ik"><use href="#i-headset"/></svg></span>After Sales</div>
+        <div class="b2-import"><span class="tanda tanda-x" aria-label="Tidak"><svg class="ik"><use href="#i-x"/></svg></span><p>Penjual jauh, respon lambat, sukar dihubungi</p></div>
+        <div class="b2-kami"><span class="tanda tanda-ok" aria-label="Ya"><svg class="ik"><use href="#i-check"/></svg></span><p>Kami di sini — senang hubungi, cepat selesai</p></div>
       </div>
     </div>
 
     <div class="tengah banding-cta reveal">
-      <a class="btn btn-emas" href="https://wa.me/60182327747?text=Hai%2C%20saya%20berminat%20nak%20tempah%20medal%20untuk%20event%20saya." target="_blank" rel="noopener">Dapatkan Sebut Harga →</a>
+      <a class="btn btn-emas" href="https://wa.me/60182327747?text=Hai%2C%20saya%20berminat%20nak%20tempah%20medal%20untuk%20event%20saya." target="_blank" rel="noopener">Dapatkan Sebut Harga <svg class="ik ik-anak"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -172,17 +260,17 @@
     <p class="eyebrow tengah reveal">— ✦ —</p>
     <h2 class="tajuk-seksyen tengah reveal">Galeri medal sebenar</h2>
     <p class="sub-seksyen tengah reveal">Bukan gambar contoh dari internet — semua ini medal yang <strong>kami sendiri siapkan</strong> untuk event di seluruh Malaysia. Bentuk custom ikut tema anda: bulat, perisai, gear… malah kapal terbang pun kami pernah buat.</p>
-    <div class="tapis reveal" role="tablist" aria-label="Tapis kategori galeri">
-      <button class="pil aktif" data-kat="semua">Semua <small>(92)</small></button>
-      <button class="pil" data-kat="funrun">Fun Run &amp; Larian <small>(25)</small></button>
-      <button class="pil" data-kat="basikal">Berbasikal <small>(11)</small></button>
-      <button class="pil" data-kat="memanah">Memanah <small>(12)</small></button>
-      <button class="pil" data-kat="bowling">Bowling <small>(21)</small></button>
-      <button class="pil" data-kat="bola">Bola Sepak <small>(6)</small></button>
-      <button class="pil" data-kat="badminton">Badminton <small>(3)</small></button>
-      <button class="pil" data-kat="sekolah">Sukan Sekolah <small>(8)</small></button>
-      <button class="pil" data-kat="set">Set Emas·Perak·Gangsa <small>(2)</small></button>
-      <button class="pil" data-kat="korporat">Korporat <small>(4)</small></button>
+    <div class="tapis reveal" role="group" aria-label="Tapis kategori galeri">
+      <button class="pil aktif" aria-pressed="true" data-kat="semua">Semua <small>(92)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="funrun">Fun Run &amp; Larian <small>(25)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="basikal">Berbasikal <small>(11)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="memanah">Memanah <small>(12)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="bowling">Bowling <small>(21)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="bola">Bola Sepak <small>(6)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="badminton">Badminton <small>(3)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="sekolah">Sukan Sekolah <small>(8)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="set">Set Emas·Perak·Gangsa <small>(2)</small></button>
+      <button class="pil" aria-pressed="false" data-kat="korporat">Korporat <small>(4)</small></button>
     </div>
     <div class="galeri-grid" id="galeriGrid">
       <figure data-kat="funrun" class="reveal"><img loading="lazy" src="assets/galeri/tm-run-7km-2025.jpg" alt="Medal larian TM RUN 7KM 2025, anjuran Kelab Berbasikal Mahsari dan Yayasan Mahsari di Dataran Mahsari, Tanah Merah. Bentuk bulat dengan tekstur kelabu marble, teks &#x27;TM RUN&#x27; merah-biru dan dua silhouet"><figcaption>TM Run 7KM 2025</figcaption></figure>
@@ -278,7 +366,7 @@
       <figure data-kat="funrun" class="reveal"><img loading="lazy" src="assets/galeri/batik-fun-run-2025-uthm-kemas.jpg" alt="Medal Batik Fun Run 2025, anjuran UTHM dan KEMAS. Bentuk custom dgn teks besar bercorak BATIK sebenar di dalam huruf, warna oren dan coklat dgn silhouette pelari. Reben merah-kuning dgn tab kulit hita"><figcaption>Batik Fun Run 2025 — UTHM &amp; KEMAS</figcaption></figure>
       <figure data-kat="funrun" class="reveal"><img loading="lazy" src="assets/galeri/future-night-run-2025.jpg" alt="Medal Future Night Run 2025 — larian waktu malam. Bentuk custom dgn teks &#x27;RUN&#x27; besar dan tiga silhouette pelari, gradasi MERAH-OREN-KUNING seperti api. Reben merah-kuning dgn tab kulit hitam. Angka &#x27;2"><figcaption>Future Night Run 2025</figcaption></figure>
     </div>
-    <div class="tengah galeri-lagi"><button class="btn btn-hijau" id="btnLagi">Tunjuk semua 92 gambar ↓</button></div>
+    <div class="tengah galeri-lagi"><button class="btn btn-hijau" id="btnLagi">Tunjuk semua 92 gambar <svg class="ik"><use href="#i-bawah"/></svg></button></div>
     <p class="galeri-nota reveal">Nak tengok lebih banyak contoh ikut tema event anda? <a href="https://wa.me/60182327747?text=Hai%2C%20boleh%20share%20contoh%20medal%20untuk%20event%20saya%3F" target="_blank" rel="noopener">WhatsApp kami</a> — kami hantar terus contoh yang sesuai.</p>
   </div>
 </section>
@@ -295,16 +383,16 @@
           <span class="harga-nombor">RM<strong>10.56</strong></span>
           <span class="harga-unit">/ medal · minimum tempahan 50 pcs</span>
         </div>
-        <div class="harga-diskaun">🏷️ Diskaun sehingga <strong>30%</strong> untuk kuantiti besar — lagi banyak, lagi jimat.</div>
+        <div class="harga-diskaun"><svg class="ik"><use href="#i-tag"/></svg> Diskaun sehingga <strong>30%</strong> untuk kuantiti besar — lagi banyak, lagi jimat.</div>
         <p class="harga-nota">Harga tepat bergantung pada kuantiti, material dan bilangan muka. WhatsApp kami dengan anggaran kuantiti — sebut harga penuh dalam beberapa minit.</p>
-        <a class="btn btn-emas" href="https://wa.me/60182327747?text=Hai%2C%20boleh%20saya%20dapatkan%20sebut%20harga%20medal%3F%20Anggaran%20kuantiti%20saya%3A%20" target="_blank" rel="noopener">Minta Sebut Harga Percuma →</a>
+        <a class="btn btn-emas" href="https://wa.me/60182327747?text=Hai%2C%20boleh%20saya%20dapatkan%20sebut%20harga%20medal%3F%20Anggaran%20kuantiti%20saya%3A%20" target="_blank" rel="noopener">Minta Sebut Harga Percuma <svg class="ik ik-anak"><use href="#i-arrow"/></svg></a>
       </div>
       <ul class="pilihan-senarai reveal">
-        <li><span class="pil-ikon">🥇</span><div><strong>Medal Acrylic — 1 muka</strong><small>Pilihan paling popular, ringan &amp; warna paling tajam</small></div></li>
-        <li><span class="pil-ikon">✨</span><div><strong>Medal Acrylic — 2 muka</strong><small>Depan design event, belakang kedudukan / penaja</small></div></li>
-        <li><span class="pil-ikon">🪵</span><div><strong>Medal Kayu — 1 atau 2 muka</strong><small>Kemasan premium bertekstur, rasa eksklusif</small></div></li>
-        <li><span class="pil-ikon">🎗️</span><div><strong>Lanyard custom — cetakan 2 muka</strong><small>Cetak penuh nama event &amp; penaja anda</small></div></li>
-        <li><span class="pil-ikon">🔷</span><div><strong>Bentuk custom ikut tema</strong><small>Bulat, perisai, gear, watak — apa sahaja design anda</small></div></li>
+        <li><span class="pil-ikon"><svg class="ik"><use href="#i-medal"/></svg></span><div><strong>Medal Acrylic — 1 muka</strong><small>Pilihan paling popular, ringan &amp; warna paling tajam</small></div></li>
+        <li><span class="pil-ikon"><svg class="ik"><use href="#i-layers"/></svg></span><div><strong>Medal Acrylic — 2 muka</strong><small>Depan design event, belakang kedudukan / penaja</small></div></li>
+        <li><span class="pil-ikon"><svg class="ik"><use href="#i-tree"/></svg></span><div><strong>Medal Kayu — 1 atau 2 muka</strong><small>Kemasan premium bertekstur, rasa eksklusif</small></div></li>
+        <li><span class="pil-ikon"><svg class="ik"><use href="#i-ribbon"/></svg></span><div><strong>Lanyard custom — cetakan 2 muka</strong><small>Cetak penuh nama event &amp; penaja anda</small></div></li>
+        <li><span class="pil-ikon"><svg class="ik"><use href="#i-shapes"/></svg></span><div><strong>Bentuk custom ikut tema</strong><small>Bulat, perisai, gear, watak — apa sahaja design anda</small></div></li>
       </ul>
     </div>
   </div>
@@ -316,6 +404,7 @@
     <p class="eyebrow tengah reveal">— ✦ —</p>
     <h2 class="tajuk-seksyen tengah reveal">Cara tempah — 5 langkah mudah</h2>
     <ol class="proses-senarai">
+      <li class="proses-garis" aria-hidden="true"><span class="proses-isi"></span></li>
       <li class="reveal"><span class="langkah">1</span><div><h3>WhatsApp kami</h3><p>Beritahu kami tentang event anda — kami balas cepat.</p></div></li>
       <li class="reveal"><span class="langkah">2</span><div><h3>Beri detail event</h3><p>Nama event, tarikh, kuantiti, 1 atau 2 muka, material acrylic atau kayu.</p></div></li>
       <li class="reveal"><span class="langkah">3</span><div><h3>Free design</h3><p>Designer kami sediakan design percuma — dipinda sehingga anda puas hati.</p></div></li>
@@ -344,7 +433,7 @@
         40000 Shah Alam, Selangor
       </address>
       <div class="lawat-cta">
-        <a class="btn btn-emas" href="https://maps.app.goo.gl/GhYR7hxQj8J3gCL57" target="_blank" rel="noopener">📍 Buka Google Maps</a>
+        <a class="btn btn-emas" href="https://maps.app.goo.gl/GhYR7hxQj8J3gCL57" target="_blank" rel="noopener"><svg class="ik"><use href="#i-pin"/></svg> Buka Google Maps</a>
         <a class="btn btn-garis-emas" href="https://wa.me/60182327747?text=Hai%2C%20saya%20nak%20datang%20lawat%20galeri%20medal.%20Bila%20waktu%20sesuai%3F" target="_blank" rel="noopener">Janji temu dulu</a>
       </div>
     </div>
@@ -401,13 +490,19 @@
 </a>
 
 <!-- Lightbox galeri -->
-<div class="kotak-cahaya" id="kotakCahaya" hidden>
-  <button class="kc-tutup" aria-label="Tutup">✕</button>
+<div class="kotak-cahaya" id="kotakCahaya" role="dialog" aria-modal="true" aria-label="Paparan gambar medal" hidden>
+  <button class="kc-tutup" aria-label="Tutup"><svg class="ik"><use href="#i-x"/></svg></button>
+  <button class="kc-nav kc-kiri" aria-label="Gambar sebelum"><svg class="ik"><use href="#i-kiri"/></svg></button>
+  <button class="kc-nav kc-kanan" aria-label="Gambar seterusnya"><svg class="ik"><use href="#i-kanan"/></svg></button>
   <img id="kcImg" alt="">
   <p id="kcKapsyen"></p>
+  <p class="kc-kira" id="kcKira"></p>
 </div>
 
-<script src="js/main.js"></script>
+<!-- Motion (pustaka vanilla oleh pembuat Framer Motion) — versi dikunci -->
+<script src="https://cdn.jsdelivr.net/npm/motion@13.4.0/dist/motion.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/gerak.js" defer></script>
 <script src="js/jejak.js"></script>
 <script src="js/sumber.js"></script>
 </body>
