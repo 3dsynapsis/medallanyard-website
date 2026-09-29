@@ -14,8 +14,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..700&family=Hanken+Grotesk:ital,wght@0,400..800;1,400..600&display=swap" rel="stylesheet">
 <meta name="theme-color" content="#081f16">
-<link rel="stylesheet" href="css/style.css?v=2609290941">
-<link rel="stylesheet" href="css/gerak.css?v=2609290941">
+<link rel="stylesheet" href="css/style.css?v=2609291115">
+<link rel="stylesheet" href="css/gerak.css?v=2609291115">
+<link rel="stylesheet" href="css/harga.css?v=2609291115">
+<!-- Julat harga untuk hasil carian Google & enjin AI. lowPrice = Acrylic 1 muka
+     @1,000 pcs, highPrice = Kayu 2 muka @50 pcs (medal sahaja, tanpa lanyard).
+     Ubah harga dlm js/harga.js → ubah dua angka ini juga. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Medal Custom Acrylic & Kayu",
+  "description": "Medal custom 1 atau 2 muka, acrylic atau kayu, dengan lanyard custom. Free design, siap 7 hari bekerja, buatan Malaysia. Minimum 50 pcs.",
+  "image": "https://medallanyard.com/assets/galeri/hero-koleksi.jpg",
+  "brand": { "@type": "Brand", "name": "Medal Lanyard Malaysia" },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "MYR",
+    "lowPrice": "7.39",
+    "highPrice": "13.00",
+    "offerCount": "4",
+    "availability": "https://schema.org/InStock",
+    "url": "https://medallanyard.com/#harga"
+  }
+}
+</script>
 <script>
   /* Animasi Motion hanya bila pengguna TAK matikan animasi. Kelas "gerak"
      sorok elemen sebelum dianimasi; gerak.js buang kelas ini kalau
@@ -61,6 +84,8 @@
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-kiri" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
     <symbol id="i-kanan" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-tolak" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-tambah" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
     <symbol id="i-bawah" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.53 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></symbol>
@@ -371,29 +396,129 @@
   </div>
 </section>
 
-<!-- ═══════════ PILIHAN & HARGA ═══════════ -->
+<!-- ═══════════ PILIHAN & HARGA — KALKULATOR ═══════════
+     Angka di sini = nilai AWAL (Acrylic 1 muka, 100 pcs, dgn lanyard) untuk
+     pelawat tanpa JavaScript. Sumber harga sebenar = HARGA/TIER dalam
+     js/harga.js, yang menulis semula semua angka ini bila laman dimuat.
+     Boss 29/09/2026: TIADA jadual harga penuh & TIADA jumlah keseluruhan. -->
 <section class="seksyen gelap" id="harga">
   <div class="wrap">
     <p class="eyebrow tengah emas-teks reveal">— ✦ —</p>
-    <h2 class="tajuk-seksyen tengah putih reveal">Pilihan &amp; harga</h2>
-    <div class="harga-grid">
-      <div class="harga-kiri reveal">
-        <div class="harga-utama">
-          <span class="harga-label">Harga bermula</span>
-          <span class="harga-nombor">RM<strong>10.56</strong></span>
-          <span class="harga-unit">/ medal · minimum tempahan 50 pcs</span>
+    <h2 class="tajuk-seksyen tengah putih reveal">Kira harga anda <em class="emas">sekarang</em></h2>
+    <p class="sub-seksyen tengah reveal">Pilih material, muka &amp; kuantiti — anggaran keluar serta-merta. Bermula <strong class="emas-teks">RM10.56</strong> seunit (50&nbsp;pcs), serendah <strong class="emas-teks">RM7.39</strong> untuk 1,000&nbsp;pcs.</p>
+
+    <div class="kalkulator reveal" id="kalkulator">
+      <form class="kk-kawalan" novalidate>
+
+        <fieldset class="kk-kump">
+          <legend class="kk-tajuk"><span class="kk-no" aria-hidden="true">1</span> Material</legend>
+          <div class="kk-pilihan">
+            <label class="kk-kad">
+              <input type="radio" name="material" value="acrylic" checked>
+              <span class="kk-kad-isi">
+                <svg class="ik" aria-hidden="true"><use href="#i-medal"/></svg>
+                <strong>Acrylic</strong>
+                <small>Paling popular</small>
+              </span>
+            </label>
+            <label class="kk-kad">
+              <input type="radio" name="material" value="kayu">
+              <span class="kk-kad-isi">
+                <svg class="ik" aria-hidden="true"><use href="#i-tree"/></svg>
+                <strong>Kayu</strong>
+                <small>Eco-friendly</small>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="kk-kump">
+          <legend class="kk-tajuk"><span class="kk-no" aria-hidden="true">2</span> Bilangan muka</legend>
+          <div class="kk-segmen">
+            <label><input type="radio" name="muka" value="1" checked><span>1 muka</span></label>
+            <label><input type="radio" name="muka" value="2"><span>2 muka</span></label>
+          </div>
+          <p class="kk-bantu">2 muka: depan design event, belakang kedudukan / penaja.</p>
+        </fieldset>
+
+        <div class="kk-kump">
+          <label class="kk-tajuk" for="kk-qty"><span class="kk-no" aria-hidden="true">3</span> Kuantiti</label>
+          <div class="kk-stepper">
+            <button type="button" class="kk-langkah" data-arah="-1" aria-label="Kurangkan kuantiti">
+              <svg class="ik" aria-hidden="true"><use href="#i-tolak"/></svg>
+            </button>
+            <div class="kk-qty-kotak">
+              <input id="kk-qty" type="number" inputmode="numeric" min="50" max="10000" step="10" value="100" aria-describedby="kk-qty-bantu">
+              <span class="kk-unit" aria-hidden="true">pcs</span>
+            </div>
+            <button type="button" class="kk-langkah" data-arah="1" aria-label="Tambah kuantiti">
+              <svg class="ik" aria-hidden="true"><use href="#i-tambah"/></svg>
+            </button>
+          </div>
+          <p id="kk-qty-bantu" class="kk-bantu">Minimum tempahan 50 pcs.</p>
+          <!-- Tangga diskaun = pemilih kuantiti pantas (chip dibuang, Boss 29/09) -->
+          <div class="kk-tangga" role="group" aria-label="Pilih kuantiti pantas">
+            <div class="kk-trek" aria-hidden="true"><span class="kk-isi"></span></div>
+            <ol>
+              <li data-q="50"><button type="button" data-qty="50" aria-pressed="false" aria-label="50 pcs, harga asas"><b>50</b><span>Asas</span></button></li>
+              <li data-q="100"><button type="button" data-qty="100" aria-pressed="true" aria-label="100 pcs, diskaun 20%"><b>100</b><span>−20%</span></button></li>
+              <li data-q="200"><button type="button" data-qty="200" aria-pressed="false" aria-label="200 pcs, diskaun 23%"><b>200</b><span>−23%</span></button></li>
+              <li data-q="300"><button type="button" data-qty="300" aria-pressed="false" aria-label="300 pcs, diskaun 25%"><b>300</b><span>−25%</span></button></li>
+              <li data-q="500"><button type="button" data-qty="500" aria-pressed="false" aria-label="500 pcs, diskaun 27%"><b>500</b><span>−27%</span></button></li>
+              <li data-q="1000"><button type="button" data-qty="1000" aria-pressed="false" aria-label="1,000 pcs, diskaun 30%"><b>1K</b><span>−30%</span></button></li>
+            </ol>
+          </div>
         </div>
-        <div class="harga-diskaun"><svg class="ik"><use href="#i-tag"/></svg> Diskaun sehingga <strong>30%</strong> untuk kuantiti besar — lagi banyak, lagi jimat.</div>
-        <p class="harga-nota">Harga tepat bergantung pada kuantiti, material dan bilangan muka. WhatsApp kami dengan anggaran kuantiti — sebut harga penuh dalam beberapa minit.</p>
-        <a class="btn btn-emas" href="https://wa.me/60182327747?text=Hai%2C%20boleh%20saya%20dapatkan%20sebut%20harga%20medal%3F%20Anggaran%20kuantiti%20saya%3A%20" target="_blank" rel="noopener">Minta Sebut Harga Percuma <svg class="ik ik-anak"><use href="#i-arrow"/></svg></a>
+
+        <div class="kk-kump">
+          <label class="kk-suis">
+            <input type="checkbox" id="kk-lanyard" role="switch" checked>
+            <span class="kk-suis-trek" aria-hidden="true"></span>
+            <span class="kk-suis-teks">
+              <strong>Lanyard custom</strong>
+              <small>+RM4.00/pcs sebelum diskaun</small>
+            </span>
+          </label>
+        </div>
+
+        <!-- Telefon sahaja: panel hasil jatuh ke bawah kawalan, jadi tanpa jalur
+             ni pelawat tukar kuantiti tapi tak nampak harga berubah. Salinan
+             visual sahaja — pembaca skrin dapat #kk-status. -->
+        <a class="kk-ringkas" href="#kk-hasil" aria-hidden="true" tabindex="-1">
+          <span class="kk-r-harga">RM<b id="kk-r-seunit">11.65</b><small>/pcs</small></span>
+          <span class="kk-r-jumlah"><b id="kk-r-qty">100 pcs</b><span id="kk-r-diskaun">Diskaun −20%</span></span>
+          <svg class="ik" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </form>
+
+      <div class="kk-hasil" id="kk-hasil">
+        <p class="kk-hasil-label">Anggaran harga seunit</p>
+        <p class="kk-harga">RM<strong id="kk-seunit">11.65</strong><span>/pcs</span></p>
+        <p class="kk-lencana" id="kk-lencana"><svg class="ik" aria-hidden="true"><use href="#i-tag"/></svg> <span>Diskaun kuantiti −20%</span></p>
+        <dl class="kk-pecahan">
+          <div class="kk-jimat" id="kk-baris-jimat"><dt>Jimat berbanding harga asas</dt><dd id="kk-jimat">RM2.91/pcs</dd></div>
+        </dl>
+        <!-- Boss 29/09/2026: JANGAN papar jumlah keseluruhan (RM3,000++ nampak
+             mahal). Tunjuk harga SEUNIT ikut kuantiti sahaja. -->
+        <div class="kk-banding">
+          <p class="kk-banding-tajuk">Harga seunit ikut kuantiti</p>
+          <ol id="kk-banding">
+            <li><button type="button" data-qty="50"><span>50 pcs</span><b>RM14.56</b></button></li>
+            <li><button type="button" data-qty="100" aria-current="true"><span>100 pcs</span><b>RM11.65</b></button></li>
+            <li><button type="button" data-qty="200"><span>200 pcs</span><b>RM11.21</b></button></li>
+            <li><button type="button" data-qty="300"><span>300 pcs</span><b>RM10.92</b></button></li>
+            <li><button type="button" data-qty="500"><span>500 pcs</span><b>RM10.63</b></button></li>
+            <li><button type="button" data-qty="1000"><span>1,000 pcs</span><b>RM10.19</b></button></li>
+          </ol>
+        </div>
+        <div class="kk-cadang" id="kk-cadang" hidden></div>
+        <a class="btn btn-wa kk-cta" id="kk-cta" href="https://wa.me/60182327747?text=Hai%2C%20saya%20nak%20sahkan%20sebut%20harga%20medal%3A%0A%E2%80%A2%20Medal%20Acrylic%201%20muka%0A%E2%80%A2%20Lanyard%20custom%3A%20Ya%0A%E2%80%A2%20Kuantiti%3A%20100%20pcs%0AAnggaran%20di%20laman%3A%20RM11.65%2Fpcs%0A%0ABoleh%20bantu%20sahkan%3F" target="_blank" rel="noopener">
+          <svg class="ikon-wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.2.8 1.3 1.7 2.1 3 2.8.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2.1 1c.3.2.5.2.6.4 0 .1 0 .7-.2 1.5Z"/></svg>
+          Sahkan harga di WhatsApp
+        </a>
+        <p class="kk-kecil">Anggaran untuk tempahan standard. Harga muktamad disahkan selepas kami lihat design anda — biasanya dalam beberapa minit. Free design termasuk.</p>
+        <p class="sr-only" id="kk-status" role="status" aria-atomic="true"></p>
       </div>
-      <ul class="pilihan-senarai reveal">
-        <li><span class="pil-ikon"><svg class="ik"><use href="#i-medal"/></svg></span><div><strong>Medal Acrylic — 1 muka</strong><small>Pilihan paling popular, ringan &amp; warna paling tajam</small></div></li>
-        <li><span class="pil-ikon"><svg class="ik"><use href="#i-layers"/></svg></span><div><strong>Medal Acrylic — 2 muka</strong><small>Depan design event, belakang kedudukan / penaja</small></div></li>
-        <li><span class="pil-ikon"><svg class="ik"><use href="#i-tree"/></svg></span><div><strong>Medal Kayu — 1 atau 2 muka</strong><small>Kemasan premium bertekstur, rasa eksklusif</small></div></li>
-        <li><span class="pil-ikon"><svg class="ik"><use href="#i-ribbon"/></svg></span><div><strong>Lanyard custom — cetakan 2 muka</strong><small>Cetak penuh nama event &amp; penaja anda</small></div></li>
-        <li><span class="pil-ikon"><svg class="ik"><use href="#i-shapes"/></svg></span><div><strong>Bentuk custom ikut tema</strong><small>Bulat, perisai, gear, watak — apa sahaja design anda</small></div></li>
-      </ul>
     </div>
   </div>
 </section>
@@ -501,9 +626,10 @@
 
 <!-- Motion (pustaka vanilla oleh pembuat Framer Motion) — versi dikunci -->
 <script src="https://cdn.jsdelivr.net/npm/motion@13.4.0/dist/motion.js" defer></script>
-<script src="js/main.js?v=2609290941" defer></script>
-<script src="js/gerak.js?v=2609290941" defer></script>
-<script src="js/jejak.js?v=2609290941"></script>
-<script src="js/sumber.js?v=2609290941"></script>
+<script src="js/main.js?v=2609291115" defer></script>
+<script src="js/gerak.js?v=2609291115" defer></script>
+<script src="js/harga.js?v=2609291115" defer></script>
+<script src="js/jejak.js?v=2609291115"></script>
+<script src="js/sumber.js?v=2609291115"></script>
 </body>
 </html>

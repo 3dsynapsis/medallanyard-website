@@ -62,6 +62,10 @@
     } catch (e) { /* pautan pelik — biar asal, jualan lebih penting */ }
   }
 
+  // Pautan yang ditulis semula selepas laman dimuat (kalkulator harga.js)
+  // kehilangan tanda — ia mesti panggil ini setiap kali tukar href.
+  window.mlTandakan = tandakan;
+
   function semua() {
     var pautan = document.querySelectorAll('a[href*="wa.me"]');
     for (var i = 0; i < pautan.length; i++) tandakan(pautan[i]);

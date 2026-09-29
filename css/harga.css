@@ -1,0 +1,317 @@
+/* ═══ KALKULATOR HARGA (#harga) ═══
+   Guna token warna dlm style.css (--emas-*, --emerald-*, --krim). Semua
+   kawalan ialah <input> sebenar yang disorok secara visual — papan kekunci,
+   pembaca skrin & borang tanpa JS terus berfungsi. */
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+/* display:flex/grid di bawah menimpa [hidden] — pulangkan semula */
+.kalkulator [hidden] { display: none !important; }
+
+.kalkulator {
+  display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  margin-top: 44px; border-radius: 26px; overflow: hidden;
+  background: linear-gradient(160deg, rgba(247, 241, 227, .065), rgba(247, 241, 227, .015));
+  border: 1px solid rgba(232, 201, 106, .3);
+  box-shadow: 0 50px 90px -48px rgba(0, 0, 0, .85), inset 0 1px 0 rgba(247, 241, 227, .07);
+}
+
+/* ── Kawalan (kiri) ── */
+.kk-kawalan {
+  display: grid; grid-template-columns: minmax(0, 1fr);   /* jangan biar kandungan melebarkan lajur */
+  gap: 32px; align-content: start; padding: 38px 40px;
+}
+.kk-kump { border: 0; margin: 0; padding: 0; min-width: 0; }
+.kk-tajuk {
+  display: flex; align-items: center; gap: 10px; padding: 0; margin-bottom: 14px;
+  font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--emas-2);
+}
+.kk-no {
+  display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(232, 201, 106, .14); border: 1px solid rgba(232, 201, 106, .5);
+  font-family: var(--font-d); font-size: 13px; font-weight: 700; letter-spacing: 0;
+  color: var(--emas-1);
+}
+.kk-bantu { font-size: 14px; color: rgba(247, 241, 227, .62); margin-top: 10px; transition: color .2s; }
+.kk-bantu.kk-ralat { color: #ffa3a3; font-weight: 600; }
+
+/* input sebenar: tak nampak tapi masih boleh difokus & diklik melalui label */
+.kk-kad input, .kk-segmen input, .kk-suis input {
+  position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0;
+}
+
+/* Material — kad pilihan */
+.kk-pilihan { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.kk-kad { position: relative; cursor: pointer; display: block; }
+.kk-kad-isi {
+  position: relative; display: flex; flex-direction: column; gap: 3px; height: 100%;
+  padding: 18px 18px 16px; border-radius: 16px;
+  border: 1.5px solid rgba(247, 241, 227, .14); background: rgba(247, 241, 227, .03);
+  transition: border-color .2s, background .2s, box-shadow .2s, transform .2s;
+}
+.kk-kad-isi::after {           /* bulatan radio di penjuru */
+  content: ""; position: absolute; top: 16px; right: 16px;
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1.5px solid rgba(247, 241, 227, .35);
+  transition: background .2s, border-color .2s, box-shadow .2s;
+}
+.kk-kad-isi .ik { font-size: 26px; color: var(--emas-2); margin-bottom: 8px; }
+.kk-kad-isi strong { font-size: 17.5px; color: var(--krim); }
+.kk-kad-isi small { font-size: 13.5px; line-height: 1.4; color: rgba(247, 241, 227, .62); }
+.kk-kad:hover .kk-kad-isi { border-color: rgba(232, 201, 106, .5); transform: translateY(-2px); }
+.kk-kad input:checked + .kk-kad-isi {
+  border-color: var(--emas-2); background: rgba(232, 201, 106, .1);
+  box-shadow: 0 0 0 3px rgba(232, 201, 106, .14), 0 18px 34px -20px rgba(201, 162, 39, .6);
+}
+.kk-kad input:checked + .kk-kad-isi::after {
+  border-color: var(--emas-2); background: var(--emas-2);
+  box-shadow: inset 0 0 0 4px var(--emerald-9);
+}
+
+/* Bilangan muka — suis segmen */
+.kk-segmen {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; max-width: 340px;
+  border-radius: 999px; background: rgba(247, 241, 227, .06);
+  border: 1px solid rgba(247, 241, 227, .15);
+}
+.kk-segmen label { position: relative; cursor: pointer; }
+.kk-segmen span {
+  display: grid; place-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px;
+  font-weight: 700; font-size: 15px; color: rgba(247, 241, 227, .75);
+  transition: background .25s, color .25s, box-shadow .25s;
+}
+.kk-segmen label:hover span { color: var(--emas-1); }
+.kk-segmen input:checked + span {
+  background: linear-gradient(135deg, var(--emas-2), var(--emas-3));
+  color: var(--emerald-9); box-shadow: 0 8px 18px -8px rgba(201, 162, 39, .7);
+}
+
+/* Kuantiti — stepper */
+.kk-stepper { display: flex; gap: 10px; max-width: 340px; }
+.kk-langkah {
+  flex: none; width: 56px; height: 60px; border-radius: 16px; cursor: pointer;
+  display: grid; place-items: center; color: var(--krim);
+  border: 1.5px solid rgba(247, 241, 227, .2); background: rgba(247, 241, 227, .04);
+  transition: border-color .2s, background .2s, color .2s, transform .12s;
+}
+.kk-langkah .ik { font-size: 22px; }
+.kk-langkah:hover { border-color: var(--emas-2); color: var(--emas-1); background: rgba(232, 201, 106, .08); }
+.kk-langkah:active { transform: scale(.93); }
+.kk-langkah:disabled { opacity: .35; cursor: not-allowed; transform: none; }
+.kk-qty-kotak {
+  flex: 1; min-width: 0; position: relative; display: flex; align-items: center;
+  border-radius: 16px; border: 1.5px solid rgba(232, 201, 106, .45);
+  background: rgba(8, 31, 22, .65); transition: border-color .2s, box-shadow .2s;
+}
+.kk-qty-kotak:focus-within { border-color: var(--emas-2); box-shadow: 0 0 0 3px rgba(232, 201, 106, .22); }
+.kk-qty-kotak:has(input[aria-invalid="true"]) { border-color: #ffa3a3; box-shadow: 0 0 0 3px rgba(255, 163, 163, .18); }
+#kk-qty {
+  width: 100%; min-width: 0; padding: 8px 46px 8px 14px; border: 0; outline: none;
+  background: transparent; color: var(--krim); text-align: center;
+  font-family: var(--font-d); font-size: 28px; font-weight: 650;
+  font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield;
+}
+#kk-qty::-webkit-outer-spin-button, #kk-qty::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.kk-unit {
+  position: absolute; right: 16px; pointer-events: none;
+  font-size: 13px; font-weight: 700; color: rgba(247, 241, 227, .5);
+}
+
+/* Kuantiti — tangga diskaun. 6 nod dlm grid sama lebar → pusat nod pertama
+   & terakhir di 1/12 dan 11/12, jadi trek bermula & berakhir di situ. */
+.kk-tangga { position: relative; margin-top: 24px; }
+.kk-trek {
+  position: absolute; left: calc(100% / 12); right: calc(100% / 12); top: 8px;
+  height: 3px; border-radius: 3px; background: rgba(247, 241, 227, .13);
+}
+.kk-isi {
+  position: absolute; inset: 0; border-radius: inherit; transform-origin: left center;
+  background: linear-gradient(90deg, var(--emas-3), var(--emas-1));
+  transform: scaleX(0); transition: transform .55s cubic-bezier(.22, 1, .36, 1);
+}
+.kk-tangga ol {
+  position: relative; display: grid; grid-template-columns: repeat(6, 1fr);
+  list-style: none; margin: 0; padding: 0;
+}
+.kk-tangga li { display: flex; justify-content: center; }
+.kk-tangga button {                 /* seluruh nod boleh ditekan: bulatan + nombor + % */
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-width: 44px; padding: 0 2px 4px; border: 0; background: none; cursor: pointer;
+  font-family: var(--font-b); color: inherit; -webkit-tap-highlight-color: transparent;
+}
+.kk-tangga button::before {
+  content: ""; width: 19px; height: 19px; border-radius: 50%; margin-bottom: 7px;
+  background: var(--emerald-9); border: 2px solid rgba(247, 241, 227, .28);
+  transition: background .3s, border-color .3s, box-shadow .3s, transform .3s;
+}
+.kk-tangga b { font-size: 13px; color: rgba(247, 241, 227, .6); font-variant-numeric: tabular-nums; transition: color .2s; }
+.kk-tangga span { font-size: 12px; font-weight: 700; color: rgba(247, 241, 227, .5); transition: color .2s; }
+.kk-tangga button:hover::before { border-color: var(--emas-2); transform: scale(1.18); }
+.kk-tangga button:hover b { color: var(--emas-1); }
+.kk-tangga button:active::before { transform: scale(.9); }
+.kk-tangga li.kk-capai button::before { background: var(--emas-2); border-color: var(--emas-2); }
+.kk-tangga li.kk-capai b { color: var(--krim); }
+.kk-tangga li.kk-capai span { color: var(--emas-2); }
+.kk-tangga li.kk-kini button::before { transform: scale(1.3); box-shadow: 0 0 0 5px rgba(232, 201, 106, .2); }
+
+/* Lanyard — suis togol */
+.kk-suis {
+  display: flex; align-items: center; gap: 16px; cursor: pointer; position: relative;
+  padding: 16px 18px; border-radius: 16px;
+  border: 1.5px solid rgba(247, 241, 227, .14); background: rgba(247, 241, 227, .03);
+  transition: border-color .2s, background .2s;
+}
+.kk-suis:hover { border-color: rgba(232, 201, 106, .5); }
+.kk-suis:has(input:checked) { border-color: rgba(232, 201, 106, .55); background: rgba(232, 201, 106, .07); }
+.kk-suis-trek {
+  flex: none; position: relative; width: 50px; height: 30px; border-radius: 999px;
+  background: rgba(247, 241, 227, .2); transition: background .25s;
+}
+.kk-suis-trek::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px;
+  border-radius: 50%; background: var(--krim); box-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+  transition: transform .3s cubic-bezier(.34, 1.56, .64, 1);
+}
+.kk-suis input:checked + .kk-suis-trek { background: linear-gradient(135deg, var(--emas-2), var(--emas-3)); }
+.kk-suis input:checked + .kk-suis-trek::after { transform: translateX(20px); }
+.kk-suis-teks strong { display: block; font-size: 15.5px; color: var(--krim); }
+.kk-suis-teks small { font-size: 13.5px; color: rgba(247, 241, 227, .62); }
+
+/* Fokus papan kekunci — input tersorok, jadi cincin fokus pada rupa visualnya */
+.kk-kad input:focus-visible + .kk-kad-isi,
+.kk-segmen input:focus-visible + span,
+.kk-suis input:focus-visible + .kk-suis-trek,
+.kk-langkah:focus-visible, .kk-tangga button:focus-visible,
+.kk-cadang button:focus-visible {
+  outline: 3px solid var(--emas-2); outline-offset: 3px;
+}
+
+/* ── Hasil (kanan) ── */
+.kk-hasil {
+  display: flex; flex-direction: column; padding: 38px 36px;
+  border-left: 1px solid rgba(232, 201, 106, .22);
+  background:
+    radial-gradient(520px 300px at 100% 0%, rgba(232, 201, 106, .16), transparent 62%),
+    linear-gradient(180deg, rgba(8, 31, 22, .5), rgba(8, 31, 22, .9));
+}
+.kk-hasil-label {
+  font-size: 13px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--emas-2);
+}
+.kk-harga {
+  margin: 12px 0 14px; line-height: 1; white-space: nowrap;
+  font-family: var(--font-d); font-size: 28px; color: var(--krim);
+  font-variation-settings: "opsz" 120;
+}
+.kk-harga strong {
+  font-size: clamp(58px, 6.2vw, 80px); font-weight: 680; letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(160deg, var(--emas-1) 10%, var(--emas-2) 45%, var(--emas-3) 80%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.kk-harga > span { font-family: var(--font-b); font-size: 16px; color: rgba(247, 241, 227, .6); margin-left: 4px; }
+.kk-lencana {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px; font-size: 14px; font-weight: 700;
+  background: rgba(31, 170, 83, .15); border: 1px solid rgba(31, 170, 83, .5); color: #86e8aa;
+}
+.kk-lencana .ik { font-size: 15px; }
+.kk-lencana.kk-lencana-asas { background: rgba(247, 241, 227, .06); border-color: rgba(247, 241, 227, .2); color: rgba(247, 241, 227, .78); }
+
+.kk-pecahan { margin: 24px 0 0; }
+.kk-pecahan > div {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  padding: 11px 0; font-size: 15px; border-bottom: 1px dashed rgba(247, 241, 227, .15);
+}
+.kk-pecahan dt { color: rgba(247, 241, 227, .7); }
+.kk-pecahan dd { margin: 0; text-align: right; font-weight: 700; color: var(--krim); font-variant-numeric: tabular-nums; }
+.kk-pecahan .kk-jimat { border-top: 1px dashed rgba(247, 241, 227, .15); }
+.kk-jimat dt, .kk-jimat dd { color: #86e8aa; font-size: 14.5px; }
+
+/* Harga seunit ikut kuantiti — ganti "jumlah keseluruhan" (Boss 29/09) */
+.kk-banding { margin-top: 20px; }
+.kk-banding-tajuk {
+  margin-bottom: 10px; font-size: 12.5px; font-weight: 800; letter-spacing: .14em;
+  text-transform: uppercase; color: rgba(247, 241, 227, .6);
+}
+.kk-banding ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.kk-banding button {
+  width: 100%; min-height: 58px; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2px; padding: 8px 6px; border-radius: 12px; cursor: pointer;
+  border: 1px solid rgba(247, 241, 227, .14); background: rgba(247, 241, 227, .04);
+  font-family: var(--font-b); color: var(--krim);
+  transition: border-color .2s, background .2s, transform .15s;
+}
+.kk-banding button span { font-size: 12.5px; font-weight: 700; color: rgba(247, 241, 227, .62); }
+.kk-banding button b { font-size: 15.5px; font-variant-numeric: tabular-nums; }
+.kk-banding button:hover { border-color: rgba(232, 201, 106, .55); transform: translateY(-1px); }
+.kk-banding button[aria-current="true"] {
+  border-color: var(--emas-2); background: rgba(232, 201, 106, .14);
+  box-shadow: 0 0 0 3px rgba(232, 201, 106, .12);
+}
+.kk-banding button[aria-current="true"] span { color: var(--emas-2); }
+.kk-banding button[aria-current="true"] b { color: var(--emas-1); }
+.kk-banding button:focus-visible { outline: 3px solid var(--emas-2); outline-offset: 2px; }
+
+.kk-cadang {
+  display: flex; gap: 12px; align-items: flex-start; margin-top: 18px; padding: 14px 16px;
+  border-radius: 14px; background: rgba(232, 201, 106, .1); border: 1px solid rgba(232, 201, 106, .38);
+  font-size: 14.5px; line-height: 1.5; color: var(--krim);
+}
+.kk-cadang > .ik { flex: none; font-size: 20px; color: var(--emas-2); margin-top: 2px; }
+.kk-cadang b { color: var(--emas-1); }
+.kk-cadang button {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;
+  min-height: 44px; padding: 0 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--emas-2); background: transparent;
+  font: 700 14px var(--font-b); color: var(--emas-1); transition: background .2s;
+}
+.kk-cadang button:hover { background: rgba(232, 201, 106, .16); }
+.kk-cadang button .ik { font-size: 15px; }
+
+.kk-cta { width: 100%; justify-content: center; margin-top: 24px; }
+.kk-kecil { margin-top: 14px; font-size: 13px; line-height: 1.55; color: rgba(247, 241, 227, .58); }
+
+/* Jalur ringkasan melekat — telefon sahaja (lihat @media di bawah) */
+.kk-ringkas { display: none; }
+
+/* ── Responsif ── */
+@media (max-width: 980px) {
+  /* minmax(0,…): tanpa ini lajur membesar ikut harga besar (nowrap) dan
+     kad memotong butang +, tangga & suis di telefon */
+  .kalkulator { grid-template-columns: minmax(0, 1fr); }
+  .kk-hasil { border-left: 0; border-top: 1px solid rgba(232, 201, 106, .22); scroll-margin-top: 90px; }
+  .kk-ringkas {
+    position: sticky; bottom: 22px; z-index: 5; margin-right: 72px;  /* elak butang WA terapung */
+    display: flex; align-items: center; gap: 12px; min-height: 62px; padding: 0 18px;
+    border-radius: 999px; text-decoration: none; color: var(--krim);
+    background: rgba(8, 31, 22, .94); border: 1px solid rgba(232, 201, 106, .5);
+    box-shadow: 0 18px 40px -14px rgba(0, 0, 0, .8);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  }
+  .kk-r-harga { font-family: var(--font-d); font-size: 15px; white-space: nowrap; }
+  .kk-r-harga b { font-size: 23px; font-weight: 700; color: var(--emas-1); font-variant-numeric: tabular-nums; }
+  .kk-r-harga small { font-family: var(--font-b); font-size: 12px; color: rgba(247, 241, 227, .6); }
+  .kk-r-jumlah { font-size: 12.5px; color: #86e8aa; line-height: 1.25; font-weight: 700; }
+  .kk-r-jumlah b { display: block; font-size: 14px; color: var(--krim); font-variant-numeric: tabular-nums; }
+  .kk-ringkas .ik { margin-left: auto; flex: none; font-size: 18px; color: var(--emas-2); transform: rotate(90deg); }
+}
+@media (max-width: 560px) {
+  .kalkulator { margin-top: 32px; border-radius: 22px; }
+  .kk-kawalan { padding: 28px 20px; gap: 28px; }
+  .kk-hasil { padding: 28px 20px; }
+  .kk-pilihan { gap: 10px; }
+  .kk-kad-isi { padding: 15px 14px 14px; }
+  .kk-kad-isi::after { top: 13px; right: 13px; }
+  .kk-kad-isi small { font-size: 12.5px; }
+  .kk-segmen, .kk-stepper { max-width: none; }
+  .kk-tangga b { font-size: 12px; }
+  .kk-cta { padding: 15px 18px; font-size: 15.5px; white-space: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kk-isi, .kk-suis-trek::after, .kk-kad-isi, .kk-tangga button::before { transition: none; }
+  .kk-kad:hover .kk-kad-isi { transform: none; }
+}

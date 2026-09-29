@@ -28,6 +28,9 @@
     // Hero ialah <section class="hero"> tanpa id — tanpa baris ni butang
     // PALING penting di laman jatuh ke dalam baldi "lain".
     if (a.closest('.hero')) return 'hero';
+    // Butang kalkulator duduk dalam section#harga — asingkan supaya kita
+    // boleh ukur sama ada kalkulator itu sendiri menjana lead.
+    if (a.closest('.kalkulator')) return 'kalkulator';
     var sek = a.closest('section');
     return (sek && sek.id) ? sek.id : 'lain';
   }
