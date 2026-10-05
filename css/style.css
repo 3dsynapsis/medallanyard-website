@@ -481,6 +481,7 @@ a { color: inherit; }
 .alamat strong { color: var(--emas-1); }
 .lawat-cta { display: flex; flex-wrap: wrap; gap: 14px; }
 .lawat-foto img {
+  width: 100%; height: auto;   /* img ada atribut width/height — tanpa ini ia teregang */
   border-radius: 18px;
   border: 1px solid rgba(232, 201, 106, .35);
   box-shadow: 0 30px 60px -22px rgba(0, 0, 0, .6);

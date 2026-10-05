@@ -71,7 +71,7 @@
   }
 
   /* ── Penapis galeri + "Tunjuk semua" ──
-     92 gambar semuanya dalam DOM (loading="lazy" jaga kelajuan), tapi
+     Semua gambar ada dalam DOM (loading="lazy" jaga kelajuan), tapi
      paparan "Semua" mula dengan 24 dahulu supaya pelawat tak lemas skrol.
      Pilih kategori = terus tunjuk SEMUA gambar kategori itu. */
   // Mobile guna grid petak 2 lajur (gerak.css) — 12 dahulu = 6 baris.
