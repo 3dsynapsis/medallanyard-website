@@ -8,11 +8,14 @@
  * CARA: Google Ads (auto-tagging ON) tambah ?gclid=… pada setiap klik iklan.
  * Kita ingat itu selama 30 hari, dan tambah kod ringkas di hujung teks
  * WhatsApp yang siap diisi:
- *     (ref: G-Ads)  = datang dari iklan Google
- *     (ref: Web)    = pelawat laman biasa (carian organik, kongsi pautan)
+ *     (ref: G-Ads)   = datang dari iklan Google
+ *     (ref: ChatGPT) = datang dari iklan ChatGPT (utm_source=chatgpt & utm_medium=cpc,
+ *                      05/10/2026 — akaun iklan OpenAI "Medal Lanyard Malaysia")
+ *     (ref: Web)     = pelawat laman biasa (carian organik, kongsi pautan)
+ * Sumber iklan TERAKHIR menang (last click), diingat 30 hari.
  *
  * ⚠️ Kod ini DIBACA oleh sistem (dashboard/leads/_laporan_harian.py →
- * TANDA_GOOGLE). Tukar teks di sini = tukar di sana juga, kalau tidak lead
+ * TANDA_GOOGLE / TANDA_CHATGPT). Tukar teks di sini = tukar di sana juga, kalau tidak lead
  * Google hilang dari laporan tanpa sebarang ralat.
  */
 (function () {
@@ -20,31 +23,40 @@
 
   var KUNCI = 'ml_sumber_iklan';
   var TEMPOH_MS = 30 * 24 * 60 * 60 * 1000;
-  var TANDA_GOOGLE = '(ref: G-Ads)';
-  var TANDA_WEB = '(ref: Web)';
+  var TANDA = { gads: '(ref: G-Ads)', chatgpt: '(ref: ChatGPT)', web: '(ref: Web)' };
 
-  function dariGoogleAds() {
+  // Sumber iklan lawatan INI: 'gads' / 'chatgpt' / null.
+  function sumberUrl() {
     var q = new URLSearchParams(window.location.search);
-    if (q.get('gclid') || q.get('gbraid') || q.get('wbraid')) return true;
-    return q.get('utm_source') === 'google' &&
-      /^(cpc|ppc|paid)/i.test(q.get('utm_medium') || '');
+    if (q.get('gclid') || q.get('gbraid') || q.get('wbraid')) return 'gads';
+    var src = (q.get('utm_source') || '').toLowerCase();
+    var paid = /^(cpc|ppc|paid)/i.test(q.get('utm_medium') || '');
+    if (paid && src === 'google') return 'gads';
+    // ChatGPT biasa (bukan iklan) tambah utm_source=chatgpt.com tanpa medium
+    // -> itu bukan iklan, jadi syarat cpc WAJIB.
+    if (paid && src === 'chatgpt') return 'chatgpt';
+    return null;
   }
 
   function ingat() {
+    var kini = sumberUrl();
     try {
-      if (dariGoogleAds()) {
-        localStorage.setItem(KUNCI, String(Date.now()));
-        return true;
+      if (kini) {
+        localStorage.setItem(KUNCI, JSON.stringify({ s: kini, t: Date.now() }));
+        return kini;
       }
-      var t = Number(localStorage.getItem(KUNCI) || 0);
-      return t > 0 && Date.now() - t < TEMPOH_MS;
+      var v = localStorage.getItem(KUNCI) || '';
+      // Format lama (sebelum 05/10/2026) = cap masa sahaja -> iklan Google.
+      var o = /^\d+$/.test(v) ? { s: 'gads', t: Number(v) } : JSON.parse(v || 'null');
+      if (o && TANDA[o.s] && Date.now() - o.t < TEMPOH_MS) return o.s;
+      return 'web';
     } catch (e) {
       // Storan disekat (mod peribadi): masih betul untuk lawatan ini.
-      return dariGoogleAds();
+      return kini || 'web';
     }
   }
 
-  var tanda = ingat() ? TANDA_GOOGLE : TANDA_WEB;
+  var tanda = TANDA[ingat()];
 
   function tandakan(a) {
     try {
